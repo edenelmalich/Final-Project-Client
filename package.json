@@ -2,7 +2,6 @@
   "name": "maxfit",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://eden-project.github.io/Final-project/",
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -21,8 +20,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy":"npm build",
-    "deploy":"gh-pages -d build",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
