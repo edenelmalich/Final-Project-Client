@@ -1,0 +1,1089 @@
+/*Attribute for all the Pages*/
+body {
+  direction: rtl;
+  font-family: Trebuchet, sans-serif;
+  background: #e5e5e5;
+  margin: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.FooterText{
+  position: fixed;
+  flex: 0 0 100%;
+  width:75%;
+  height: 10%;
+  right: 22%;
+}
+.FooterTitle{
+  position: absolute;
+  text-align: center;
+  bottom: 25%;
+  right: 30%;
+}
+/*The Attributes of Mainpage*/
+.Mainlogo{
+  position: relative;
+  max-width: 100%;
+  height: 130px;
+  margin-right: 42%;
+  vertical-align: middle;
+  border-style: none;
+}
+.MainpageContainer{
+  width: 100%;
+  height: 75%;
+}
+.Mainobject{
+  width: 50%;
+  height: 100%;
+  margin-right: 150px;
+}
+.MainBack{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+.MainTitle{
+  color:#555;
+  font-size: 30px;
+  font-family: Trebuchet, sans-serif;
+  font-weight: 600;
+  margin-right: 40%;
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+.MainHeader{
+  position: relative;
+  height:100px;
+  width: 60%;
+  background:#dfdede;
+  margin-right: 50%;
+}
+.HeaderText{
+  position: relative;
+  font-size: 30px;
+  color: #555;
+  text-align: center;
+  padding-top: 7%;
+  font-weight: 400;
+}
+.Loginbox{
+  position: relative;
+  background: #ffffff;
+  width: 60%;
+  height: 410px;
+  margin-right: 50%;
+  background-repeat: no-repeat;
+}
+.LoginAtt{
+  position: relative;
+  width: 75%;
+  height:100%;
+  margin-right: 13%;
+  padding-bottom: 10px;
+}
+.IconLogin{
+  color: #555;
+  font-size: 3em;
+  margin-right: 40%;
+  margin-top: 15px;
+}
+.LoginHeader{
+  color: #555;
+  font-size: 22px;
+  font-family: Trebuchet, sans-serif;
+  font-weight: 600;
+  margin-top: 10px;
+  margin-right: 34%; 
+}
+#RegisterHeader{
+  margin-right: 38%;
+}
+#ForgetHeader{
+  margin-right: 30%;
+}
+.FooterMain{
+  position: relative;
+  flex: 0 0 100%;
+  width:75%;
+  height: 10%;
+  right: 22%;
+}
+.Main-Title-Footer{
+  position: relative;
+  bottom: 25%;
+  margin-right: 27%;
+  padding-top:15px;
+}
+/*Form Login With Attributes*/
+.FormLogin{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  margin-top: 20px;
+  margin-right: 32px;
+}
+.FormLogin input[type=text]{
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  text-indent: 50px;
+}
+.FormLogin input[type=password]{
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  text-indent: 50px;
+  margin-top: 25px;
+}
+.FormLogin input[type=submit]{
+  width: 100%;
+  height: 50px;
+  border: none;
+  outline: none;
+  margin-top: 25px;
+  color: #555;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.FormLogin input[type=submit]:hover{
+  background:#b6b6b6;
+}
+::-webkit-input-placeholder{
+  margin: 15px;
+  font-size: 15px;
+}
+.IconInputBox{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+}
+.icon-Login{
+  font-size: 1.5em;
+  color: #555;
+  margin-top: 12px;
+  margin-right: 15px;
+}
+.icon-Pass{
+  font-size: 1.5em;
+  color: #555;
+  margin-top:35px;
+  margin-right: 15px;
+}
+.FormFooter{
+  width: 100%;
+  height: 50px;
+}
+.Footer-Text{
+  position: absolute;
+  padding-top: 5px;
+  color:#555;
+  font-size: 16px;
+}
+.FooterForgot{
+  position: absolute;
+  right:70%;
+  padding-top: 5px;
+  color:#555;
+  font-size: 16px;
+  font-weight: 600;
+}
+.FormLogin input[type=checkbox]{
+  margin-top: 9px;
+  margin-right: 95%;
+}
+/*Form Forgot Password With Attributes*/
+.FormForgot{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  margin-top: 20px;
+  margin-right: 32px;
+}
+.FormForgot input[type=password]{
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  text-indent: 50px;
+  margin-top: 25px;
+}
+.FormForgot input[type=text]{
+  font-size: 15px;
+  width: 100%;
+  height: 50px;
+  text-indent: 50px;
+}
+.FormForgot input[type=submit]{
+  position: relative;
+  width: 49%;
+  height: 41px;
+  border: none;
+  outline: none;
+  margin-top: 11px;
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  left: 4px;
+  cursor: pointer;
+}
+.FormForgot input[type=submit]:hover{
+  background:#b6b6b6;
+}
+#ReturnLog{
+  margin-top: 76%;
+}
+.ReturnLogin:hover{
+  background:#b6b6b6;
+}
+.ForgetButton{
+  font-size: 15px;
+  text-decoration: none;
+  color:#555;
+}
+.ForgetButton:hover{
+  background:#b6b6b6;
+}
+/*Form Register With Attributes*/
+.RegistarText{
+  margin-top: 15px;
+  font-size: 15px;
+  color:#555;
+}
+.RegistarButton{
+  width: 75px;
+  height: 20px;
+  outline: none;
+  border: none;
+  font-size:15px;
+  margin-right: 97px;
+  color:#555;
+  background-color: #dfdede;
+  text-decoration: none;
+  padding:7px 9px;
+}
+
+.RegistarButton:hover{
+  background:#b6b6b6;
+}
+.RegisterBox{  
+  position: relative;
+  background: white;
+  width: 60%;
+  height: 420px;
+  margin-right: 50%;
+}
+.FormRegister{
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  margin-top: 5px;
+  margin-right: 32px;
+}
+.FormRegister input[type=text],[type=email]{
+  font-size: 15px;
+  width: 100%;
+  height: 35px;
+  text-indent: 10px;
+  margin-top: 15px;
+}
+.FormRegister input[type=password]{
+  font-size: 15px;
+  width: 50%;
+  height: 35px;
+  text-indent: 10px;
+  margin-top: 15px;
+}
+.FormRegister input[type=submit]{
+  width: 49%;
+  height: 41px;
+  border: none;
+  outline: none;
+  margin-top: 11px;
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.FormRegister input[type=submit]:hover{
+  background:#b6b6b6;
+}
+.ReturnLogin{
+  position: relative;
+  font-size: 18px;
+  font-weight: 600;
+  margin-right: 4px;
+  right:1px;
+  padding-right:32px;
+  padding-left: 32px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  color:#555;
+  background-color: #d6d6d6;
+  text-decoration: none;
+}
+/*Main Header of all Pages*/
+.header-desktop {
+  background: #f5f5f5;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 300px;
+  height: 75px;
+  z-index: 3;
+}
+/*The Attributes of the box inside the main header*/
+.MainHeaderObject {
+  position: fixed;
+  width: 300px;
+  height: 50px;
+  margin-top: 10px;
+  margin-right: 58%;
+  background: #f5f5f5;
+}
+/*The Attributes of Notification box*/
+.NotiBox {
+  position: absolute;
+  background: #fff;
+  width: 300px;
+  height: 350px;
+  margin-top: 6%;
+  margin-right: 68%;
+  border: 1px solid #e5e5e5;
+}
+.NotiBox:before {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-bottom: 9px solid #fff;
+  border-top: 9px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  position: absolute;
+  top: -17px;
+  left: 127px;
+  z-index: 3;
+}
+.AccBox:before {
+  content: "";
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-bottom: 9px solid #fff;
+  border-top: 9px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  position: absolute;
+  top: -17px;
+  left: 10px;
+  z-index: 3;
+}
+*,
+::before {
+  box-sizing: border-box;
+}
+.Notification-Title {
+  padding: 22px;
+  border-bottom: 1px solid #f2f2f2;
+  color: #555;
+  font-family: Trebuchet, sans-serif;
+  font-weight: 600;
+}
+.Notification-item {
+  border-bottom: 1px solid #f2f2f2;
+  color: #555;
+  font-family: Trebuchet, sans-serif;
+  padding: 19px 22px;
+  padding-bottom: 14px;
+  display: flex;
+}
+.AccBox{
+  position: absolute;
+  background: #fff;
+  width: 200px;
+  height: 300px;
+  margin-top: 6%;
+  margin-right: 80%;
+  border: 1px solid #e5e5e5;
+}
+/*all The Object in Main Header*/
+.Accname {
+  position: fixed;
+  font-size: 18px;
+  color: #333;
+  font-family: Trebuchet, sans-serif;
+  font-weight: 600;
+  margin-right: 145px;
+  margin-top: 13px;
+}
+.icon-acc {
+  position: fixed;
+  color: #333;
+  margin-right: 280px;
+  margin-top: 15px;
+  border: none;
+  outline: none;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+.Notifications {
+  position: fixed;
+  color: #555;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  margin-right: 100px;
+  margin-top: 11px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
+}
+.Notifications:hover{
+  color: #6e6e6e;
+}
+.icon-acc:hover{
+  color: #6e6e6e;
+}
+/*The Attributes of the Sidebar in all pages*/
+.sidebar {
+  position: fixed;
+  width: 300px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #fff;
+  overflow-y: auto;
+}
+.sidebar .logo {
+  background: #f5f5f5;
+  padding: 0 35px;
+  position: relative;
+  height: 75px;
+  margin: 0;
+  top: 0;
+  display: flex;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #e5e5e5;
+  align-items: center;
+  z-index: 3;
+}
+.sidebar ul {
+  list-style: none;
+}
+.sidebar li {
+  border-bottom: 2px solid #f5f5f5;
+  padding: 20px;
+}
+.sidebar a {
+  display: block;
+  color: #555;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+}
+.sidebar__AttText {
+  position: relative;
+  padding-top: 30px;
+  padding-right: 10px;
+}
+img {
+  max-width: 100%;
+  height: 90px;
+  margin-right: 20px;
+  vertical-align: middle;
+  border-style: none;
+}
+a.nav_link:hover {
+  cursor: pointer;
+  color: #4272d7;
+}
+a.active {
+  font-weight: bold;
+  color: #4272d7;
+}
+li:hover a,
+li#selected a {
+  font-weight: bold;
+  color: #4272d7;
+}
+/*The Attributes of the container in all pages*/
+.PageContainer {
+  padding-right: 300px;
+}
+.ContainerSize {
+  padding: 0 30px;
+}
+.ContentInfo {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.MainContent {
+  padding-top: 116px;
+  min-height: 100vh;
+  overflow: auto;
+}
+/*heading 2,3,4 Attributes */
+h2 {
+  color: #555;
+  font-family: Trebuchet, sans-serif;
+}
+h3 {
+  color: #555;
+  margin-right: 5px;
+  font-family: Trebuchet, sans-serif;
+  font-size: 20px;
+  padding: 25px 10px;
+}
+h4 {
+  color: #fff;
+  margin-right: 12px;
+  font-family: Trebuchet, sans-serif;
+  display: inline-block;
+  font-size: 20px;
+}
+/*The Attributes of the Dashboard page*/
+.MainPad {
+  padding: 35px;
+  margin-right: -35px;
+  display:flex;
+}
+.BoxsAtt {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.BoxInfo {
+  padding: 5px;
+  width: 20%;
+  height: 75%;
+  margin-top: 20px;
+  border-radius: 20px;
+  margin-right:52px;
+  padding-bottom: 40px;
+}
+#ClientDesign {
+  background-image: linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+  background-image: linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
+  background-image: linear-gradient(360deg, #3f5efb 0%, #fc466b 100%);
+}
+#NclientDesign {
+  background-image: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  background-image: linear-gradient(90deg, #11998e 0%, #38ef7d 100%);
+  background-image: linear-gradient(360deg, #11998e 0%, #38ef7d 100%);
+}
+#SubscriptionDesign {
+  background-image: linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+  background-image: linear-gradient(90deg, #45b649 0%, #dce35b 100%);
+  background-image: linear-gradient(360deg, #45b649 0%, #dce35b 100%);
+}
+#StatisticsDesign {
+  background-image: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  background-image: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
+  background-image: linear-gradient(360deg, #ee0979 0%, #ff6a00 100%);
+}
+.icon {
+  padding:15px 15px 0 15px;
+  color: white;
+}
+.text {
+  padding:15px;
+  color: white;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 20px;
+}
+.BoxStat{
+  width: 50%;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+}
+.BoxTitle{
+  font-size: 20px;
+  font-weight: 600;
+  color:#555;
+  padding: 5%;
+}
+/*The Attributes of the box inside pages: Customers,Nclients,HealthP*/
+.header-Form {
+  width: 100%;
+  height: 75px;
+  background: #f5f5f5;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+}
+.FormN {
+  position: absolute;
+  width:75%;
+  height: 620px;
+  background: #fff;
+}
+/*The Attributes of the Statistics page*/
+.Fontstat {
+  margin-top: 5px;
+  color: #555;
+}
+.HeaderStat {
+  background: #333;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  width: 565px;
+  height: 75px;
+}
+#HeaderHand {
+  background: #333;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  top: -374px;
+  right: 580px;
+  width: 565px;
+  height: 75px;
+}
+#HeaderChest {
+  background: #333;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  top: 20px;
+  right: 0px;
+  width: 565px;
+  height: 75px;
+}
+#HeaderAbs {
+  background: #333;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  top: -375px;
+  right: 580px;
+  width: 565px;
+  height: 75px;
+}
+.Iconstat {
+  position: absolute;
+  margin-right: 12px;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 1.5em;
+  display: inline-block;
+}
+.Header-Att{
+  padding-top:10px;
+  display: flex;
+}
+.StatisticInfo {
+  width: 565px;
+  height: 320px;
+  background: white;
+}
+
+.StatisticInfo-Margin{
+  margin-right:0px;
+}
+.StatisticInfo-Att{
+  margin-right:15px;
+}
+#FontStatistic {
+  margin-right: 20px;
+  margin-top: 20px;
+}
+/*The Attributes of New Client Page*/
+.NewClientForm {
+  margin-right:17%;
+  margin-top:20px;
+  width: 65%;
+  height: 82%;
+  background: #f5f5f5;
+  border-right: 1px solid #e5e5e5;
+}
+.PageTitle {
+  color: #555;
+  font-size: 30px;
+  font-family: Georgia, serif;
+  z-index: 3;
+  padding-right:15%;
+  font-weight: 600;
+}
+.FormAtt {
+  color: #555;
+  margin-right: 10%;
+  font-family: Georgia, serif;
+  font-weight: bold;
+  font-size: 16px;
+  align-items: center;
+}
+.FormPadding {
+  padding-top: 30px;
+  padding-right:15%;
+  padding-left: 15%;
+}
+.inputPadding {
+  padding-top: 30px;
+  padding-right:15%;
+  padding-left: 15%;
+}
+.FormAtt label {
+  padding-left: 7px;
+  font-size: 18px;
+}
+.TextAttributes {
+  padding-left: 20px;
+  font-size: 18px;
+}
+.FormAtt label::before {
+  content: "*";
+  color: red;
+}
+.FormAtt input[type=submit]{
+  font-size: 18px;
+  font-family: Georgia, serif;
+  width: 120px;
+  height: 30px;
+  border: none;
+  outline:none;
+  font-weight: 600;
+  margin-right: 35%;
+  cursor: pointer;
+}
+.FormAtt input[type=date]{
+  margin-right: 1.3px;
+}
+.TextAttributes input[type="radio"]{
+  margin-right: 10px;
+  cursor: pointer;
+}
+/*The Attributes of the ExePlan page*/
+.ExeMain{
+  width: 80%;
+  height:500px;
+  margin-top: 20px;
+  margin-right: 10%;
+  background: #f5f5f5;
+}
+.ExeForm{
+  width: 80%;
+  height: 75px;
+  margin-top: 40px;
+}
+.ExeForm input[type=text]{
+  width: 30%;
+  height:60%;
+  margin-top: 5%;
+  margin-right: 26%;
+  text-indent: 10px;
+}
+.ExeForm select{
+  width: 30%;
+  height:60%;
+  text-indent: 10px;
+  margin-right: 10%;
+  color:#6e6e6e;
+  font-size: 15px;
+}
+.ExeDays{
+  position: relative;
+  width: 90%;
+  height: 340px;
+  margin-right: 3.7%;
+  margin-top: 5%;
+  flex-wrap: wrap;
+}
+.ExeBoxs{
+  position: absolute;
+  margin-top: 10px;
+  width: 105px;
+  height: 240px;
+  border: none;
+  outline:none;
+  border-radius: 20px;
+}
+#SundayDesign {
+  background-image: linear-gradient(90deg, #d2fb3f 0%, #fc466b 100%);
+  background-image: linear-gradient(90deg, #d2fb3f 0%, #fc466b 100%);
+  background-image: linear-gradient(360deg, #d2fb3f 0%, #fc466b 100%);
+}
+#MondayDesign {
+  background-image: linear-gradient(90deg, #2fccbf 0%, #24f708 100%);
+  background-image: linear-gradient(90deg, #2fccbf 0%, #24f708 100%);
+  background-image: linear-gradient(360deg, #2fccbf 0%, #24f708 100%);
+  margin-right: 15%;
+}
+#TuesdayDesign {
+  background-image: linear-gradient(90deg, #fa2424 0%, #ffa600 100%);
+  background-image: linear-gradient(90deg, #fa2424 0%, #ffa600 100%);
+  background-image: linear-gradient(360deg, #fa2424 0%, #ffa600 100%);
+  margin-right: 30%;
+}
+#WednesdayDesign {
+  background-image: linear-gradient(90deg, #ee0979 0%, #a7366a 100%);
+  background-image: linear-gradient(90deg, #ee0979 0%, #a7366a 100%);
+  background-image: linear-gradient(360deg, #ee0979 0%, #a7366a 100%);
+  margin-right: 45%;
+}
+#ThursdayDesign {
+  background-image: linear-gradient(90deg, #fbff04 0%, #00aeff 100%);
+  background-image: linear-gradient(90deg, #fbff04 0%, #00aeff 100%);
+  background-image: linear-gradient(360deg, #fbff04 0%, #00aeff 100%);
+  margin-right: 60%;
+}
+#FridayDesign {
+  background-image: linear-gradient(90deg, #fbff04 0%, #22ff05 100%);
+  background-image: linear-gradient(90deg, #fbff04 0%, #22ff05 100%);
+  background-image: linear-gradient(360deg, #fbff04 0%, #22ff05 100%);
+  margin-right: 75%;
+}
+#SaturdayDesign {
+  background-image: linear-gradient(90deg, #d400ff 0%, #ff6a00 100%);
+  background-image: linear-gradient(90deg, #d400ff 0%, #ff6a00 100%);
+  background-image: linear-gradient(360deg, #d400ff 0%, #ff6a00 100%);
+  margin-right: 90%;
+}
+.DaysText{
+  color: white;
+  font-size: 18px;
+  margin-bottom: 200px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+.PlanBox{
+  width: 80%;
+  height: 500px;
+  margin-top:40px;
+  margin-right: 10%;
+  background: #f5f5f5;
+}
+.PlanHeader{
+  position: relative;
+  font-size: 30px;
+  color:#555;
+  margin-right: 37%;
+  width: 80%;
+  height: 60px;
+  margin-top: 10px;
+  font-weight: 600;
+  padding-top: 10px;
+
+}
+.FormMuscles{
+  width: 100%;
+  height: 75px;
+  border: 1px solid #e5e5e5;
+  display: block;
+}
+.FormMuscles input[type="checkbox"]{
+  position: relative;
+  margin-right: 10px;
+  top:2px;
+  cursor: pointer;
+}
+.BackPage{
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  left:30%;
+  color:#555;
+  font-size:16px;
+  bottom:10px;
+  text-decoration: none;
+}
+.BackPage:hover{
+  color: #333;
+}
+.TextMuscles{
+  position: relative;
+  font-size: 16px;
+  margin-right: 15px;
+  color: #555;
+  top: 25px;
+}
+.ExeBox{
+  position: fixed;
+  margin-top:20px;
+  width: 57%;
+  height: 350px;
+  right:31.5%;
+}
+.HeaderBox{
+  position: relative;
+  width: 300px;
+  height: 75px;
+  margin-right: 28%;
+  margin-top:30px;
+}
+.ExeHeader{
+  position: absolute;
+  width: 250px;
+  height: 50px;
+  font-size: 20px;
+  color: #555;
+  font-weight: 600;
+  right: 27%;
+  top:20px;
+}
+.ExeAttributes{
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  margin-right: 55px;
+  overflow: auto;
+  display: inline-block;
+}
+.ExeButtons{
+  width: 240px;
+  height: 75px;
+  border: none;
+  margin-right: 8px;
+  margin-top: 5px;
+  color:#555;
+  background: #d6d6d6;
+  font-weight: 600;
+  display:inline-block;
+  text-align: center;
+  padding-top: 10px;
+  cursor: pointer;
+}
+.ExeButtons:hover{
+  background: #9a9a9a;
+}
+/*Attributes of BuildPlan page*/
+
+/*Attributes of icon Exercises List and List Box*/
+.iconList{
+  float:left;
+  margin-left:10%;
+  margin-top:2%;
+  font-size: 30px;
+  color:#555;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.quantity{
+  position: absolute;
+  display: inline-block;
+  left:17%;
+  padding-top: 2px;
+  height: 18px;
+  width:18px;
+  line-height: 15px;
+  text-align: center;
+  background: #ff4b5a;
+  color: #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  font-size: 12px;
+}
+.ListBox{
+  position: absolute;
+  width: 300px;
+  height: 430px;
+  background: #555;
+  margin-top:4%;
+  left: 7%;
+  border-bottom: 1px solid #f2f2f2;
+  z-index:3;
+  
+}
+.ListBox::before{
+  content: "";
+  display: block;
+  width: 19px;
+  height: 19px;
+  border-bottom: 9px solid #555;
+  border-top: 9px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  position: absolute;
+  top: -17px;
+  float:left;
+  right:45%;
+  z-index: 3;
+}
+.itemsBox{
+  position: relative;
+  width:300px;
+  height: 310px;
+  overflow:auto;
+}
+.Closeitem{
+  position: absolute;
+  left:8px;
+  font-size:18px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.HeaderList{
+  color:#fff;
+  font-size:22px;
+  text-align: center;
+  margin-top:5px;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 12px;
+}
+.HeaderMuscle{
+  color:#fff;
+  font-size:22px;
+  text-align: center;
+  margin-top:5px;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 12px;
+}
+.ExercisesText{
+  border-bottom: 1px solid #f2f2f2;
+  color: #fff;
+  padding: 19px 22px;
+  padding-bottom: 14px;
+  display: flex;
+}
+.ListBoxFooter{
+  position: relative;
+  widows: 300px;
+  height: 65px;
+}
+.ButtonSave{
+  position: relative;
+  margin-top: 5%;
+  margin-right: 5%;
+  width: 130px;
+  color:#333;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline:none ;
+}
+.ButtonClose{
+  position: relative;
+  margin-top: 5%;
+  margin-right: 3%;
+  width: 130px;
+  color:#333;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline:none ;
+}
+/*Attributes of scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+/*::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}*/
