@@ -59,15 +59,37 @@ class BuildPlan extends Component {
       { id: 36, label: "כפיפת מרפקים עם משקולות יד", selected: false }
     ],
     BHExercises: [
-      { id: 28, label: "לחיצת חזה בשכיבה באחיזה צרה עם מוט", selected: false },
-      { id: 29, label: "פשיטת מרפקים בשכיבה עם מוט", selected: false },
-      { id: 30, label: "פשיטת מרפק בפולי", selected: false },
-      { id: 31, label: "מקבילים כנגד ספסל", selected: false },
-      { id: 32, label: "מקבילים כגד משקל גוף", selected: false },
-      { id: 33, label: "לחיצה צרפתית", selected: false },
-      { id: 34, label: "", selected: false },
-      { id: 35, label: " כפיפות מרפקים כנגד כבל קרוס בישיבה", selected: false },
-      { id: 36, label: "כפיפת מרפקים עם משקולות יד", selected: false }
+      { id: 37, label: "לחיצת חזה בשכיבה באחיזה צרה עם מוט", selected: false },
+      { id: 38, label: "פשיטת מרפקים בשכיבה עם מוט", selected: false },
+      { id: 39, label: "פשיטת מרפק בפולי", selected: false },
+      { id: 40, label: "מקבילים כנגד ספסל", selected: false },
+      { id: 41, label: "מקבילים כגד משקל גוף", selected: false },
+      { id: 42, label: "לחיצה צרפתית", selected: false },
+      { id: 43, label: "לחיצת חזה אחיזת מעויין", selected: false },
+      { id: 44, label: "שכיבות שמיכה יהלום", selected: false },
+      { id: 45, label: "מקבילים עם משקל", selected: false }
+    ],
+    LegsExercises: [
+      { id: 46, label: "הרמת עקבים בעמידה כנגד מכונת סמית", selected: false },
+      { id: 47, label: "כפיפת ברכיים בשכיבה במכונה", selected: false },
+      { id: 48, label: "לחיצת רגליים במכונה", selected: false },
+      { id: 49, label: "סקוואט כנגד מוט", selected: false },
+      { id: 50, label: "סקוואט ברגל אחת עם משקולת יד", selected: false },
+      { id: 51, label: "סווינג", selected: false },
+      { id: 52, label: "מכרעיים בהליכה עם משקולות", selected: false },
+      { id: 53, label: "מכרעיים לאחור כנגד מוט", selected: false },
+      { id: 54, label: "לחיצת כפות רגליים רחבות וגבוהות", selected: false }
+    ],
+    ShouldersExercises: [
+      { id: 55, label: "הרחקה בעמידה בהצלבה עם כבלים", selected: false },
+      { id: 56, label: "לחיצת כתפיים בישיבה עם משקולות", selected: false },
+      { id: 57, label: "הרחקת כתפיים בעמידה עם משקולות", selected: false },
+      { id: 58, label: "חתירה אופקית עם חבל כנגד פולי עליון", selected: false },
+      { id: 59, label: "חתירה ישרה לסנטר עם מוט", selected: false },
+      { id: 60, label: "כפיפת כתף בעמידה כנגד פלטה", selected: false },
+      { id: 61, label: "כפיפת כתף בעמידה עם חבל כנגד פולי", selected: false },
+      { id: 62, label: "לחיצת ארנולד", selected: false },
+      { id: 63, label: "לחיצת בראדפורד בעמידה", selected: false }
     ],
     OpenList: false,
     Count: 0
@@ -99,6 +121,18 @@ class BuildPlan extends Component {
       this.setState({
         FHExercises: JSON.parse(localStorage.getItem("FHExercises"))
       });
+      localStorage.getItem("BHExercises") &&
+      this.setState({
+        BHExercises: JSON.parse(localStorage.getItem("BHExercises"))
+      });
+      localStorage.getItem("LegsExercises") &&
+      this.setState({
+        LegsExercises: JSON.parse(localStorage.getItem("LegsExercises"))
+      });
+      localStorage.getItem("ShouldersExercises") &&
+      this.setState({
+        ShouldersExercises: JSON.parse(localStorage.getItem("ShouldersExercises"))
+      });
   }
   //this Function for Save The Parameters That I need in Local storage
   componentWillUpdate(NextProps, NextState) {
@@ -119,6 +153,18 @@ class BuildPlan extends Component {
     localStorage.setItem(
       "FHExercises",
       JSON.stringify(NextState.FHExercises)
+    );
+    localStorage.setItem(
+      "BHExercises",
+      JSON.stringify(NextState.BHExercises)
+    );
+    localStorage.setItem(
+      "LegsExercises",
+      JSON.stringify(NextState.LegsExercises)
+    );
+    localStorage.setItem(
+      "ShouldersExercises",
+      JSON.stringify(NextState.ShouldersExercises)
     );
   }
   onChange = id => {
@@ -180,6 +226,39 @@ class BuildPlan extends Component {
       })
     });
   };
+  saveBackHand = id => {
+    this.setState({
+      BHExercises: this.state.BHExercises.map(item => {
+        if (id === item.id && item.selected === false) {
+          item.selected = true;
+          this.Additem();
+        }
+        return item;
+      })
+    });
+  };
+  saveLegs = id => {
+    this.setState({
+      LegsExercises: this.state.LegsExercises.map(item => {
+        if (id === item.id && item.selected === false) {
+          item.selected = true;
+          this.Additem();
+        }
+        return item;
+      })
+    });
+  };
+  saveShoulders = id => {
+    this.setState({
+      ShouldersExercises: this.state.ShouldersExercises.map(item => {
+        if (id === item.id && item.selected === false) {
+          item.selected = true;
+          this.Additem();
+        }
+        return item;
+      })
+    });
+  };
   Additem = () => {
     this.setState(prevState => {
       return { Count: prevState.Count + 1 };
@@ -229,6 +308,33 @@ class BuildPlan extends Component {
         return item;
       })
     });
+    this.setState({
+      BHExercises: this.state.BHExercises.map(item => {
+        if (id === item.id) {
+          item.selected = false;
+          this.setState({ Count: this.state.Count - 1 });
+        }
+        return item;
+      })
+    });
+    this.setState({
+     LegsExercises: this.state.LegsExercises.map(item => {
+        if (id === item.id) {
+          item.selected = false;
+          this.setState({ Count: this.state.Count - 1 });
+        }
+        return item;
+      })
+    });
+    this.setState({
+      ShouldersExercises: this.state.ShouldersExercises.map(item => {
+         if (id === item.id) {
+           item.selected = false;
+           this.setState({ Count: this.state.Count - 1 });
+         }
+         return item;
+       })
+     });
   };
   CloseBox() {
     this.setState({ OpenList: false });
@@ -306,6 +412,51 @@ class BuildPlan extends Component {
                           </div>
                         ))}
                         {this.state.FHExercises.map(item => (
+                          <div key={item.id}>
+                            {item.selected ? (
+                              <div className="ExercisesText">
+                                <span
+                                  className="Closeitem"
+                                  onClick={this.Closeitem.bind(this, item.id)}
+                                >
+                                  +
+                                </span>
+                                {item.label}
+                              </div>
+                            ) : null}
+                          </div>
+                        ))}
+                        {this.state.BHExercises.map(item => (
+                          <div key={item.id}>
+                            {item.selected ? (
+                              <div className="ExercisesText">
+                                <span
+                                  className="Closeitem"
+                                  onClick={this.Closeitem.bind(this, item.id)}
+                                >
+                                  +
+                                </span>
+                                {item.label}
+                              </div>
+                            ) : null}
+                          </div>
+                        ))}
+                        {this.state.LegsExercises.map(item => (
+                          <div key={item.id}>
+                            {item.selected ? (
+                              <div className="ExercisesText">
+                                <span
+                                  className="Closeitem"
+                                  onClick={this.Closeitem.bind(this, item.id)}
+                                >
+                                  +
+                                </span>
+                                {item.label}
+                              </div>
+                            ) : null}
+                          </div>
+                        ))}
+                        {this.state.ShouldersExercises.map(item => (
                           <div key={item.id}>
                             {item.selected ? (
                               <div className="ExercisesText">
@@ -406,6 +557,60 @@ class BuildPlan extends Component {
                                 <span
                                   key={item.id}
                                   onClick={this.saveFrontHand.bind(this, item.id)}
+                                  className="ExeButtons"
+                                >
+                                  {item.label}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+                        {muscles.selected && muscles.value === "BackHand" ? (
+                          <div className="ExeBox">
+                            <div className="HeaderBox">
+                              <div className="ExeHeader">רשימת תרגילים</div>
+                            </div>
+                            <div className="ExeAttributes">
+                              {this.state.BHExercises.map(item => (
+                                <span
+                                  key={item.id}
+                                  onClick={this.saveBackHand.bind(this, item.id)}
+                                  className="ExeButtons"
+                                >
+                                  {item.label}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+                        {muscles.selected && muscles.value === "Legs" ? (
+                          <div className="ExeBox">
+                            <div className="HeaderBox">
+                              <div className="ExeHeader">רשימת תרגילים</div>
+                            </div>
+                            <div className="ExeAttributes">
+                              {this.state.LegsExercises.map(item => (
+                                <span
+                                  key={item.id}
+                                  onClick={this.saveLegs.bind(this, item.id)}
+                                  className="ExeButtons"
+                                >
+                                  {item.label}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+                        {muscles.selected && muscles.value === "Shoulders" ? (
+                          <div className="ExeBox">
+                            <div className="HeaderBox">
+                              <div className="ExeHeader">רשימת תרגילים</div>
+                            </div>
+                            <div className="ExeAttributes">
+                              {this.state.ShouldersExercises.map(item => (
+                                <span
+                                  key={item.id}
+                                  onClick={this.saveShoulders.bind(this, item.id)}
                                   className="ExeButtons"
                                 >
                                   {item.label}
