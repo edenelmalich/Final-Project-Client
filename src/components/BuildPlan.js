@@ -14,7 +14,7 @@ class BuildPlan extends Component {
       { id: 5, label: "רגליים", value: "Legs", selected: false },
       { id: 6, label: "כתפיים", value: "Shoulders", selected: false }
     ],
-    ExercisesChest: [
+    ChestExercises: [
       { id: 1, label: "לחיצת חזה כנגד מוט", selected: false },
       { id: 2, label: "לחיצה בשיפוע עליון כנגד דאמבלים", selected: false },
       { id: 3, label: "פרפר מכונה", selected: false },
@@ -25,7 +25,7 @@ class BuildPlan extends Component {
       { id: 8, label: "פרפר בשכיבה עם משקולות", selected: false },
       { id: 9, label: "שכיבות שמיכה", selected: false }
     ],
-    ExercisesAbs: [
+    AbsExercises: [
       { id: 10, label: "כפיפות בטן", selected: false },
       { id: 11, label: "פלאנק", selected: false },
       { id: 12, label: "פלאנק צידי", selected: false },
@@ -36,7 +36,7 @@ class BuildPlan extends Component {
       { id: 17, label: "כפיפת גב הצידה", selected: false },
       { id: 18, label: "הרמת רגליים בתלייה", selected: false }
     ],
-    ExercisesBack: [
+    BackExercises: [
       { id: 19, label: "מתח", selected: false },
       { id: 20, label: "משיכה מפולי עליון", selected: false },
       { id: 21, label: "מסור / חתירה יד יד", selected: false },
@@ -46,6 +46,28 @@ class BuildPlan extends Component {
       { id: 25, label: "חתירה בהטיית גב כנגד מוט", selected: false },
       { id: 26, label: "משיכת פולי עליון אחיזה צרה", selected: false },
       { id: 27, label: " מתח רחב", selected: false }
+    ],
+    FHExercises: [
+      { id: 28, label: "כפיפת מרפקים כנגד מוט", selected: false },
+      { id: 29, label: "כפיפת מרפקים בעמידה עם מוט", selected: false },
+      { id: 30, label: "פטישים", selected: false },
+      { id: 31, label: "מתח באחיזה הפוכה", selected: false },
+      { id: 32, label: "כפיפת מרפק על כיסא כומר", selected: false },
+      { id: 33, label: "כפיפת מרפק בפולי", selected: false },
+      { id: 34, label: "כפיפות מרפקים בספסל פריצ'ר בישיבה", selected: false },
+      { id: 35, label: " כפיפות מרפקים כנגד כבל קרוס בישיבה", selected: false },
+      { id: 36, label: "כפיפת מרפקים עם משקולות יד", selected: false }
+    ],
+    BHExercises: [
+      { id: 28, label: "לחיצת חזה בשכיבה באחיזה צרה עם מוט", selected: false },
+      { id: 29, label: "פשיטת מרפקים בשכיבה עם מוט", selected: false },
+      { id: 30, label: "פשיטת מרפק בפולי", selected: false },
+      { id: 31, label: "מקבילים כנגד ספסל", selected: false },
+      { id: 32, label: "מקבילים כגד משקל גוף", selected: false },
+      { id: 33, label: "לחיצה צרפתית", selected: false },
+      { id: 34, label: "", selected: false },
+      { id: 35, label: " כפיפות מרפקים כנגד כבל קרוס בישיבה", selected: false },
+      { id: 36, label: "כפיפת מרפקים עם משקולות יד", selected: false }
     ],
     OpenList: false,
     Count: 0
@@ -61,17 +83,21 @@ class BuildPlan extends Component {
       this.setState({
         Muscles: JSON.parse(localStorage.getItem("Muscles"))
       });
-    localStorage.getItem("ExercisesChest") &&
+    localStorage.getItem("ChestExercises") &&
       this.setState({
-        ExercisesChest: JSON.parse(localStorage.getItem("ExercisesChest"))
+        ChestExercises: JSON.parse(localStorage.getItem("ChestExercises"))
       });
-    localStorage.getItem("ExercisesAbs") &&
+    localStorage.getItem("AbsExercises") &&
       this.setState({
-        ExercisesAbs: JSON.parse(localStorage.getItem("ExercisesAbs"))
+        AbsExercises: JSON.parse(localStorage.getItem("AbsExercises"))
       });
-    localStorage.getItem("ExercisesBack") &&
+    localStorage.getItem("BackExercises") &&
       this.setState({
-        ExercisesBack: JSON.parse(localStorage.getItem("ExercisesBack"))
+        BackExercises: JSON.parse(localStorage.getItem("BackExercises"))
+      });
+      localStorage.getItem("FHExercises") &&
+      this.setState({
+        FHExercises: JSON.parse(localStorage.getItem("FHExercises"))
       });
   }
   //this Function for Save The Parameters That I need in Local storage
@@ -79,16 +105,20 @@ class BuildPlan extends Component {
     localStorage.setItem("Count", JSON.stringify(NextState.Count));
     localStorage.setItem("Muscles", JSON.stringify(NextState.Muscles));
     localStorage.setItem(
-      "ExercisesChest",
-      JSON.stringify(NextState.ExercisesChest)
+      "ChestExercises",
+      JSON.stringify(NextState.ChestExercises)
     );
     localStorage.setItem(
-      "ExercisesAbs",
-      JSON.stringify(NextState.ExercisesAbs)
+      "AbsExercises",
+      JSON.stringify(NextState.AbsExercises)
     );
     localStorage.setItem(
-      "ExercisesBack",
-      JSON.stringify(NextState.ExercisesBack)
+      "BackExercises",
+      JSON.stringify(NextState.BackExercises)
+    );
+    localStorage.setItem(
+      "FHExercises",
+      JSON.stringify(NextState.FHExercises)
     );
   }
   onChange = id => {
@@ -108,7 +138,7 @@ class BuildPlan extends Component {
   };
   saveChest = id => {
     this.setState({
-      ExercisesChest: this.state.ExercisesChest.map(item => {
+      ChestExercises: this.state.ChestExercises.map(item => {
         if (id === item.id && item.selected === false) {
           item.selected = true;
           this.Additem();
@@ -119,7 +149,7 @@ class BuildPlan extends Component {
   };
   saveAbs = id => {
     this.setState({
-      ExercisesAbs: this.state.ExercisesAbs.map(item => {
+      AbsExercises: this.state.AbsExercises.map(item => {
         if (id === item.id && item.selected === false) {
           item.selected = true;
           this.Additem();
@@ -130,7 +160,18 @@ class BuildPlan extends Component {
   };
   saveBack = id => {
     this.setState({
-      ExercisesBack: this.state.ExercisesBack.map(item => {
+      BackExercises: this.state.BackExercises.map(item => {
+        if (id === item.id && item.selected === false) {
+          item.selected = true;
+          this.Additem();
+        }
+        return item;
+      })
+    });
+  };
+  saveFrontHand = id => {
+    this.setState({
+      FHExercises: this.state.FHExercises.map(item => {
         if (id === item.id && item.selected === false) {
           item.selected = true;
           this.Additem();
@@ -151,7 +192,7 @@ class BuildPlan extends Component {
   }
   Closeitem = id => {
     this.setState({
-      ExercisesChest: this.state.ExercisesChest.map(item => {
+      ChestExercises: this.state.ChestExercises.map(item => {
         if (id === item.id) {
           item.selected = false;
           this.setState({ Count: this.state.Count - 1 });
@@ -161,7 +202,7 @@ class BuildPlan extends Component {
       })
     });
     this.setState({
-      ExercisesAbs: this.state.ExercisesAbs.map(item => {
+      AbsExercises: this.state.AbsExercises.map(item => {
         if (id === item.id) {
           item.selected = false;
           this.setState({ Count: this.state.Count - 1 });
@@ -171,7 +212,16 @@ class BuildPlan extends Component {
       })
     });
     this.setState({
-      ExercisesBack: this.state.ExercisesBack.map(item => {
+      BackExercises: this.state.BackExercises.map(item => {
+        if (id === item.id) {
+          item.selected = false;
+          this.setState({ Count: this.state.Count - 1 });
+        }
+        return item;
+      })
+    });
+    this.setState({
+      FHExercises: this.state.FHExercises.map(item => {
         if (id === item.id) {
           item.selected = false;
           this.setState({ Count: this.state.Count - 1 });
@@ -210,7 +260,7 @@ class BuildPlan extends Component {
                     <span className="ListBox">
                       <div className="HeaderList">תרגילים שנבחרו</div>
                       <div className="itemsBox">
-                        {this.state.ExercisesChest.map(item => (
+                        {this.state.ChestExercises.map(item => (
                           <div key={item.id}>
                             {item.selected ? (
                               <div className="ExercisesText">
@@ -225,7 +275,7 @@ class BuildPlan extends Component {
                             ) : null}
                           </div>
                         ))}
-                        {this.state.ExercisesAbs.map(item => (
+                        {this.state.AbsExercises.map(item => (
                           <div key={item.id}>
                             {item.selected ? (
                               <div className="ExercisesText">
@@ -240,7 +290,22 @@ class BuildPlan extends Component {
                             ) : null}
                           </div>
                         ))}
-                        {this.state.ExercisesBack.map(item => (
+                        {this.state.BackExercises.map(item => (
+                          <div key={item.id}>
+                            {item.selected ? (
+                              <div className="ExercisesText">
+                                <span
+                                  className="Closeitem"
+                                  onClick={this.Closeitem.bind(this, item.id)}
+                                >
+                                  +
+                                </span>
+                                {item.label}
+                              </div>
+                            ) : null}
+                          </div>
+                        ))}
+                        {this.state.FHExercises.map(item => (
                           <div key={item.id}>
                             {item.selected ? (
                               <div className="ExercisesText">
@@ -282,7 +347,7 @@ class BuildPlan extends Component {
                               <div className="ExeHeader">רשימת תרגילים</div>
                             </div>
                             <div className="ExeAttributes">
-                              {this.state.ExercisesChest.map(item => (
+                              {this.state.ChestExercises.map(item => (
                                 <span
                                   key={item.id}
                                   onClick={this.saveChest.bind(this, item.id)}
@@ -301,7 +366,7 @@ class BuildPlan extends Component {
                               <div className="ExeHeader">רשימת תרגילים</div>
                             </div>
                             <div className="ExeAttributes">
-                              {this.state.ExercisesAbs.map(item => (
+                              {this.state.AbsExercises.map(item => (
                                 <span
                                   key={item.id}
                                   onClick={this.saveAbs.bind(this, item.id)}
@@ -319,10 +384,28 @@ class BuildPlan extends Component {
                               <div className="ExeHeader">רשימת תרגילים</div>
                             </div>
                             <div className="ExeAttributes">
-                              {this.state.ExercisesBack.map(item => (
+                              {this.state.BackExercises.map(item => (
                                 <span
                                   key={item.id}
                                   onClick={this.saveBack.bind(this, item.id)}
+                                  className="ExeButtons"
+                                >
+                                  {item.label}
+                                </span>
+                              ))}
+                            </div>
+                          </div>
+                        ) : null}
+                        {muscles.selected && muscles.value === "FrontHand" ? (
+                          <div className="ExeBox">
+                            <div className="HeaderBox">
+                              <div className="ExeHeader">רשימת תרגילים</div>
+                            </div>
+                            <div className="ExeAttributes">
+                              {this.state.FHExercises.map(item => (
+                                <span
+                                  key={item.id}
+                                  onClick={this.saveFrontHand.bind(this, item.id)}
                                   className="ExeButtons"
                                 >
                                   {item.label}
