@@ -84,18 +84,22 @@ class Nclients extends Component {
                   <div className="inputPadding">
                     <header className="PageTitle">טופס הרשמה לחדר כושר</header>
                     </div>
-                      <from action="#" className="FormAtt">
+                      <form action="#" className="FormAtt">
                         <div className="FormPadding">
                         <label>שם משפחה:</label>
-                          <input type="text" name="firstname" required/> &nbsp; 
+                          <input type="text" name="firstname" required/>
+                          <span className="textPadding">
                           <label>שם פרטי:</label>
+                          </span>
                           <input type="text" name="lastname" required/>
                           <br />
                         </div>
                         <div className="inputPadding">
                           <label>תעודת זהות:</label>
-                          <input type="text" name="id" required="required" />&nbsp; 
+                          <input type="text" name="id" required="required" />
+                          <span className="textPadding">
                           <label>תאריך לידה:</label>
+                          </span>
                           <input type="date" name="date"/>
                           <br />
                         </div>
@@ -141,14 +145,14 @@ class Nclients extends Component {
                         <div className="inputPadding">
                           <input type="submit" name="send" value="הוסף לקוח חדש" />
                         </div>
-                      </from>
+                      </form>
                   </div>
                 </div>
               </div>
             </div>
           </div>
           <div className="FooterText">
-            <div className="FooterTitle">Final Project By Eden Elmalich And Mor Tsadok</div>
+            <div className="FooterTitle">Final Project By Eden Elmalich</div>
           </div>
         </div>
       </div>

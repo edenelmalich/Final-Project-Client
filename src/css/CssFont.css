@@ -10,17 +10,15 @@ body {
   padding: 0;
 }
 .FooterText{
-  position: fixed;
+  position: static;
   flex: 0 0 100%;
-  width:75%;
-  height: 10%;
-  right: 22%;
+  width:100%;
+  height: 50px;
+  padding:20px;
 }
 .FooterTitle{
-  position: absolute;
+  position: static;
   text-align: center;
-  bottom: 25%;
-  right: 30%;
 }
 /*The Attributes of Mainpage*/
 .Mainlogo{
@@ -512,6 +510,9 @@ li#selected a {
   font-weight: bold;
   color: #4272d7;
 }
+.IconPadding{
+  padding-right:10px;
+}
 /*The Attributes of the container in all pages*/
 .PageContainer {
   padding-right: 300px;
@@ -594,6 +595,7 @@ h4 {
 .icon {
   padding:15px 15px 0 15px;
   color: white;
+  text-decoration:none;
 }
 .text {
   padding:15px;
@@ -601,18 +603,55 @@ h4 {
   font-family: Georgia, serif;
   font-weight: bold;
   font-size: 20px;
+  text-decoration:none;
 }
 .BoxStat{
-  width: 50%;
+  width: 43%;
   height: 400px;
   background: white;
   border-radius: 10px;
+  float:right;
+  margin-right: 52px;
+}
+.BoxSubscription{
+  width: 43%;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  float: right;
+  margin-right: 55px;
 }
 .BoxTitle{
   font-size: 20px;
   font-weight: 600;
   color:#555;
   padding: 5%;
+}
+.TitleClient{
+  font-size: 22px;
+  font-weight: 600;
+  color:#555;
+  margin-right: 52px;
+  float:right;
+  padding-top:50px;
+}
+.BoxNewClients{
+  width: 91%;
+  height: 400px;
+  background: white;
+  float: right;
+  margin-right: 52px;
+  margin-top: 2%;
+  border-radius:10px;
+}
+.ClientTitle{
+  width: 100%;
+  height: 75px;
+  background: #333;
+}
+table{
+  color:white;
+  max-width: 100%;
 }
 /*The Attributes of the box inside pages: Customers,Nclients,HealthP*/
 .header-Form {
@@ -704,7 +743,7 @@ h4 {
   font-size: 30px;
   font-family: Georgia, serif;
   z-index: 3;
-  padding-right:15%;
+  text-align: center;
   font-weight: 600;
 }
 .FormAtt {
@@ -717,13 +756,13 @@ h4 {
 }
 .FormPadding {
   padding-top: 30px;
-  padding-right:15%;
-  padding-left: 15%;
+  padding-right:5%;
+  padding-left: 5%;
 }
 .inputPadding {
   padding-top: 30px;
-  padding-right:15%;
-  padding-left: 15%;
+  padding-right:5%;
+  padding-left: 5%;
 }
 .FormAtt label {
   padding-left: 7px;
@@ -737,6 +776,9 @@ h4 {
   content: "*";
   color: red;
 }
+.textPadding{
+  padding-right:7px;
+}
 .FormAtt input[type=submit]{
   font-size: 18px;
   font-family: Georgia, serif;
@@ -745,11 +787,11 @@ h4 {
   border: none;
   outline:none;
   font-weight: 600;
-  margin-right: 35%;
+  margin-right: 28%;
   cursor: pointer;
 }
 .FormAtt input[type=date]{
-  margin-right: 1.3px;
+  width: 23.4%;
 }
 .TextAttributes input[type="radio"]{
   margin-right: 10px;
@@ -905,7 +947,6 @@ h4 {
 .ExeButtons{
   width: 240px;
   height: 75px;
-  border: none;
   margin-right: 8px;
   margin-top: 5px;
   color:#555;
@@ -1073,6 +1114,61 @@ h4 {
   font-weight: 600;
   border: none;
   outline:none ;
+}
+/*Attributes of Updates page*/
+.UpdateBox{
+  width: 85%;
+  height: 450px;
+  background: white;
+  float: right;
+  margin-right: 10%;
+}
+.HeaderUpdateBox{
+  width: 100%;
+  height: 75px;
+  background: #f5f5f5;
+}
+.formUpdate{
+  margin-top: 2%;
+  margin-right: 13%;
+}
+.formUpdate input[type="text"]{
+  font-size: 16px;
+  color:#555;
+}
+.formUpdate input[type="submit"]{
+  font-family: Trebuchet, sans-serif;
+  font-size: 16px;
+  width: 120px;
+  height: 30px;
+  border: none;
+  outline:none;
+  font-weight: 600;
+  margin-right: 30%;
+  cursor: pointer;
+}
+.formUpdate label{
+  padding: 5px;
+  font-weight: 400;
+}
+.formUpdate label::before {
+  content: "*";
+  color: red;
+}
+textarea{
+  width: 50%;
+  height: 150px;
+  margin-right: 14%;
+}
+.UpdateText{
+  font-size: 16px;
+  color: #555;
+  font-weight: 600;
+  margin-right: 30%;
+  padding-top: 5px;
+}
+.PaddingText{
+  padding-top: 10px;
 }
 /*Attributes of scrollbar */
 ::-webkit-scrollbar {

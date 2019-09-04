@@ -10,7 +10,7 @@ import {
   faChartBar,
   faTasks
 } from "@fortawesome/free-solid-svg-icons";
-import { faFileAlt, faAddressCard } from "@fortawesome/free-regular-svg-icons";
+import { faFileAlt, faAddressCard,faEdit} from "@fortawesome/free-regular-svg-icons";
 class Navbar extends Component {
   state = {
     Notification: false,
@@ -80,37 +80,43 @@ class Navbar extends Component {
                 <li>
                   <NavLink to="/dashboard">
                     <FontAwesomeIcon icon={faTachometerAlt} />
-                    &nbsp; לוח בקרה
+                    <span className="IconPadding">לוח בקרה</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/nclients">
                     <FontAwesomeIcon icon={faAddressCard} />
-                    &nbsp; לקוח חדש
+                    <span className="IconPadding">לקוח חדש</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/healthp">
                     <FontAwesomeIcon icon={faFileAlt} />
-                    &nbsp; הצהרות בריאות
+                    <span className="IconPadding">הצהרת בריאות</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/customers">
                     <FontAwesomeIcon icon={faUsers} />
-                    &nbsp; לקוחות
+                    <span className="IconPadding">לקוחות</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/statistics">
                     <FontAwesomeIcon icon={faChartBar} />
-                    &nbsp; סטטיסטיקת מתאמנים
+                    <span className="IconPadding">סטטיסטיקת מתאמנים</span>
                   </NavLink>
                 </li>
                 <li>
                   <NavLink to="/exeplan">
                     <FontAwesomeIcon icon={faTasks} />
-                    &nbsp; תוכניות אימונים
+                    <span className="IconPadding">תוכניות אימונים</span> 
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="updates">
+                    <FontAwesomeIcon icon={faEdit} />
+                    <span className="IconPadding">עדכונים</span>
                   </NavLink>
                 </li>
               </ul>

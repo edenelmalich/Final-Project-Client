@@ -11,6 +11,7 @@ import "./css/CssFont.css";
 import BuildPlan from './components/BuildPlan';
 import Registar from './components/Registar';
 import ForgotPass from './components/ForgotPass';
+import { Updates } from './components/Updates';
 
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
       <Route path="/nclients" component={Nclients}/>
       <Route path="/exeplan" component={ExePlan}/>
       <Route path="/buildPlan" component={BuildPlan}/>
+      <Route path="/updates" component={Updates}/>
       <Route path="/registarApp" component={Registar}/>
       <Route path="/forgotPass" component={ForgotPass}/>
       </Switch>
