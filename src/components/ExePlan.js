@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "./Navbar";
-import { NavLink } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 class ExePlan extends Component {
   // Function That For Checking The State of The Days
@@ -10,16 +10,15 @@ class ExePlan extends Component {
     return (
       <div className="ExePlan">
         <Navbar />
-        {/* General Attributes For ExePlan Page + Header*/}
-        <div className="ContainerSize">
-          <div className="PageContainer">
-            <div className="MainContent">
-              <div className="ContentInfo">
+        <div className="Page-Container">
+          <div className="Pages-Content">
+            <div className="Att-PagesContent">
+              <div className="PagesContainer">
                 <h2>בניית תוכנית אימונים</h2>
-                {/* The Attributes of The Main Box */}
-                {/* All Objects Are inside it */}
-                  <div className="ExeMain">
-                    <form className="ExeForm">
+                <div className="ExePadding"></div>
+                <div className="ExeMain">
+                  <form className="ExeForm">
+                    <div className="Exe-Flex">
                       <input type="text" placeholder="שם מתאמן" />
                       <select name="Days">
                         <option>מספר ימי אימון</option>
@@ -29,9 +28,11 @@ class ExePlan extends Component {
                         <option value="four">4</option>
                         <option value="five">5</option>
                       </select>
-                    </form>
-                    {/*in This Code i Will Create The Days*/}
-                    <div className="ExeDays">
+                      </div>
+                      <div className="ExePadding"></div>
+                      <div className="Main-Border"></div>
+                      <div className="ExePadding"></div>
+                      <div className="ExeDays">
                       <NavLink to="/BuildPlan"
                         className="ExeBoxs"
                         id="SundayDesign"
@@ -73,9 +74,10 @@ class ExePlan extends Component {
                         id="SaturdayDesign"
                       >
                         <div className="DaysText">יום שבת</div>
-                      </NavLink>
-                    </div>
+                      </NavLink>          
                   </div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>

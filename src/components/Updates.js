@@ -7,44 +7,35 @@ export class Updates extends Component {
     return (
       <div className="updates">
         <Navbar />
-        <div className="ContainerSize">
-          <div className="PageContainer">
-            <div className="MainContent">
-              <div className="ContentInfo">
-                <h2>עדכונים</h2>
-                <div className="MainPad">
-                  <div className="UpdateBox">
-                    <div className="HeaderUpdateBox">
-                      <h3>עדכון חדש</h3>
-                    </div>
-                    <form action="#action" className="formUpdate">
-                    <div className="FormPadding">
-                      <label>שם משפחה:</label>
-                      <input type="text" name="firstname" required />
-                      <span className="textPadding">
-                      <label>שם פרטי:</label>
-                      </span>
-                      <input type="text" name="lastname" required />
-                      <br/>
-                    </div>
-                    <div className="FormPadding">
-                      <div className="UpdateText">הכנס עדכון חדש</div>
-                      <div className="PaddingText"></div>
+        <div className="Page-Container">
+          <div className="Pages-Content">
+            <div className="Att-PagesContent">
+              <div className="PagesContainer">
+                <div className="FormClient">
+                  <header className="Header-Client">
+                    <h3>עדכונים</h3>
+                  </header>
+                    <form action="#action" className="Form-Update">
+                    <div className="Main-Padding"></div>
+                      <input type="text" name="firstname" placeholder="שם פרטי" required />
+                      <input type="text" name="lastname" placeholder="שם משפחה" required />
+                    <div className="Main-Padding"></div>
+                      <div className="Main-Border"></div>
+                      <label>הכנס עדכון חדש</label>
+                      <div className="Main-Padding"></div>
                     <textarea name="update"></textarea>
-                    </div>
-                    <div className="FormPadding">
-                      <input type="submit" name="SendUpdate" value="הוסף עדכון חדש"></input>
-                    </div>
+                    <div className="Main-Padding"></div>
+                    <div className="Main-Border"></div>
+                      <input type="submit" name="SendUpdate" value="הוסף עדכון חדש"/>
                   </form>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="FooterText">
+            <div className="FooterText">
             <div className="FooterTitle">Final Project By Eden Elmalich</div>
+          </div> 
           </div>
-        </div>
       </div>
     );
   }

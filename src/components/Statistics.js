@@ -14,44 +14,38 @@ class Statistics extends Component {
     return (
       <div className="Statistics">
         <Navbar />
-        <div className="ContainerSize">
-          <div className="PageContainer">
-            <div className="MainContent">
-              <div className="ContentInfo">
+        <div className="Page-Container">
+          <div className="Pages-Content">
+            <div className="Att-PagesContent">
+              <div className="PagesContainer">
                 <h2>סטטיסטיקת מתאמנים</h2>
-                <div className="Header-Att"></div>
-                <div className="MainPad">
-                <div className="StatisticInfo-Margin">
+                <div className="Flex-Statistic">
                     <div className="StatisticInfo">
                     <div className="HeaderStat">
-                        <h4 id="FontStatistic"> סטטיסטיקת משקל </h4>
-                        <span className="Iconstat">
+                        <h4 className="Statistic-Header-Att"> סטטיסטיקת משקל </h4>
+                         <div className="Iconstat">
                           <FontAwesomeIcon icon={faWeight} />
-                        </span>
+                        </div> 
                       </div>
                     </div>
-                    </div>
-                  <div className="StatisticInfo-Att">
                     <div className="StatisticInfo">
-                    <div className="HeaderStat" id="HeaderHand">
-                        <h4 id="FontStatistic"> סטטיסטיקת היקף יד קדמית</h4>
-                        <span className="Iconstat">
+                    <div className="HeaderStat">
+                        <h4 className="Statistic-Header-Att"> סטטיסטיקת היקף יד קדמית</h4>
+                         <div className="Iconstat">
                           <FontAwesomeIcon icon={faDumbbell} />
-                        </span>
+                        </div> 
                       </div>
-
                     </div>
-                  </div>
+                </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="FooterText">
+            <div className="FooterText">
           <div className="FooterTitle">
             Final Project By Eden Elmalich
           </div>
         </div>
+        </div> 
       </div>
     );
   }

@@ -10,74 +10,76 @@ import {
   faChartBar
 } from "@fortawesome/free-solid-svg-icons";
 
-
 class Dashboard extends Component {
   render() {
     return (
-      <div className="Dashboard">
-        <Navbar />
-        <div className="ContainerSize">
-          <div className="PageContainer">
-            <div className="MainContent">
-              <div className="ContentInfo">
-                <h2>סקירה כללית</h2>
-                <div className="MainPad">
-                  <div className="BoxsAtt">
-                      <div className="BoxInfo" id="ClientDesign">
-                      <NavLink to="/customers">
-                        <div className="icon">
-                          <FontAwesomeIcon icon={faUser} size="3x" />
-                        </div>
-                        </NavLink>
-                        <div className="text">
-                          <span>לקוחות</span>
-                        </div>
-                      </div>
-                    <div className="BoxInfo" id="NclientDesign">
-                    <a href="#Clients">
-                      <div className="icon">
-                        <FontAwesomeIcon icon={faUserPlus} size="3x" />
-                      </div>
-                      </a>
-                      <div className="text">
-                        <span>לקוחות חדשים</span>
-                      </div>
-                    </div>
-                    <div className="BoxInfo" id="SubscriptionDesign">
-                      <div className="icon">
-                        <FontAwesomeIcon icon={faUserClock} size="3x" />
-                      </div>
-                      <div className="text">
-                        <span>חידוש מנויים</span>
-                      </div>
-                    </div>
-                    <div className="BoxInfo" id="StatisticsDesign">
-                      <div className="icon">
-                        <FontAwesomeIcon icon={faChartBar} size="3x" />
-                      </div>
-                      <div className="text">
-                        <span>סטטיסטיקת מנויים</span>
-                      </div>
-                    </div>
-                  </div>
+      <div>
+      <Navbar />
+      <div className="Page-Container">
+        <div className="Pages-Content">
+        <div className="Att-PagesContent">
+          <div className="PagesContainer">
+          <h2>סקירה כללית</h2>
+          <div className="DashBoard-Margin">
+            <div className="Dash-Box-Att">
+             <div className="BoxInfo" id="ClientDesign">
+              <NavLink to="/customers">
+                <div className="DashBoard-Icon">
+                  <FontAwesomeIcon icon={faUser} size="3x" />
+                </div>
+              </NavLink>
+              <div className="DashBoard-Text">
+                <span>לקוחות</span>
               </div>
-              <div className="BoxStat">
-              <div className="BoxTitle">סטטיסטיקת מנויים</div>
+            </div> 
+            <div className="BoxInfo" id="NclientDesign">
+              <a href="#Clients">
+                <div className="DashBoard-Icon">
+                  <FontAwesomeIcon icon={faUserPlus} size="3x" />
+                </div>
+              </a>
+              <div className="DashBoard-Text">
+                <span>לקוחות חדשים</span>
               </div>
-              <div className="BoxSubscription">
-                <div className="BoxTitle">סטטיסטיקת חידוש מנויים</div>
+            </div> 
+            <div className="BoxInfo" id="SubscriptionDesign">
+              <div className="DashBoard-Icon">
+                <FontAwesomeIcon icon={faUserClock} size="3x" />
               </div>
-              <div className="TitleClient">לקוחות חדשים</div>
-              <div className="BoxNewClients" id="Clients">
-                <div className="ClientTitle">
-              </div>
-              </div>
+              <div className="DashBoard-Text">
+                <span>חידוש מנויים</span>
               </div>
             </div>
+             <div className="BoxInfo" id="StatisticsDesign">
+              <div className="DashBoard-Icon">
+                <FontAwesomeIcon icon={faChartBar} size="3x" />
+              </div>
+              <div className="DashBoard-Text">
+                <span>סטטיסטיקת מנויים</span>
+              </div>
+            </div>
+            </div> 
+        <div className="Dash-Box-Att">
+        <div className="BoxStat">
+          <div className="BoxTitle">סטטיסטיקת מנויים</div>
+        </div>
+        <div className="BoxStat">
+          <div className="BoxTitle">סטטיסטיקת חידוש מנויים</div>
+        </div>
+        </div>
+        <div className="TitleClient">לקוחות חדשים</div>
+        <div className="Dash-Box-Att">
+        <div className="BoxNewClients" id="Clients">
+          <div className="ClientTitle"></div>
           </div>
           <div className="FooterText">
             <div className="FooterTitle">Final Project By Eden Elmalich</div>
-          </div>
+          </div> 
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
         </div>
       </div>
     );

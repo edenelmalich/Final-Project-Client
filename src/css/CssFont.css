@@ -5,19 +5,47 @@ body {
   background: #e5e5e5;
   margin: 0;
 }
+.Pages-Content{
+  padding-top: 116px;
+  min-height: 100vh;
+}
+.Att-PagesContent{
+  padding: 0 30px;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+.PagesContainer{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.Pages-Wrapper{
+  overflow: hidden;
+}
+.Page-Container{
+  background: #e5e5e5;
+  padding-right: 300px;
+}
 * {
   margin: 0;
   padding: 0;
 }
 .FooterText{
-  position: static;
   flex: 0 0 100%;
   width:100%;
   height: 50px;
   padding:20px;
 }
 .FooterTitle{
-  position: static;
+  position: relative;
+  text-align: center;
+}
+.Footer-Pages{
+  margin-top: 15px;
+  height: 75px;
   text-align: center;
 }
 /*The Attributes of Mainpage*/
@@ -25,18 +53,14 @@ body {
   position: relative;
   max-width: 100%;
   height: 130px;
-  margin-right: 42%;
-  vertical-align: middle;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   border-style: none;
 }
-.MainpageContainer{
-  width: 100%;
-  height: 75%;
-}
-.Mainobject{
-  width: 50%;
-  height: 100%;
-  margin-right: 150px;
+.Main-Title-Footer{
+  position: relative;
 }
 .MainBack{
   position: fixed;
@@ -45,108 +69,131 @@ body {
   background-repeat: no-repeat;
 }
 .MainTitle{
+  position: relative;
   color:#555;
   font-size: 30px;
   font-family: Trebuchet, sans-serif;
   font-weight: 600;
-  margin-right: 40%;
-  margin-top: 15px;
-  padding-bottom: 15px;
+  text-align: center;
 }
 .MainHeader{
   position: relative;
-  height:100px;
-  width: 60%;
   background:#dfdede;
-  margin-right: 50%;
+  padding: 10px;
 }
-.HeaderText{
+.Main-HeaderText{
   position: relative;
   font-size: 30px;
   color: #555;
   text-align: center;
-  padding-top: 7%;
+  padding:10px;
   font-weight: 400;
 }
-.Loginbox{
+.Main-Wrap {
+  max-width: 540px;
+  padding-top: 5vh;
+  margin: 0 auto;
+}
+.Main-Box{
   position: relative;
   background: #ffffff;
-  width: 60%;
-  height: 410px;
-  margin-right: 50%;
   background-repeat: no-repeat;
+  margin-left: auto;
+  margin-right: auto;
 }
-.LoginAtt{
+.MainAtt{
   position: relative;
-  width: 75%;
-  height:100%;
-  margin-right: 13%;
+  margin-left: auto;
+  margin-right: auto;
   padding-bottom: 10px;
+  padding-top:10px;
 }
-.IconLogin{
+.Main-Icon{
   color: #555;
   font-size: 3em;
-  margin-right: 40%;
-  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-.LoginHeader{
+.Main-Title{
   color: #555;
   font-size: 22px;
   font-family: Trebuchet, sans-serif;
   font-weight: 600;
-  margin-top: 10px;
-  margin-right: 34%; 
+  padding: 10px;
+  text-align: center; 
 }
-#RegisterHeader{
-  margin-right: 38%;
+.Main-Border{
+  border-top: 1px solid #e7e7e7;
+  margin-bottom: 7px;
 }
-#ForgetHeader{
-  margin-right: 30%;
+.Main-Padding{
+  margin-bottom: 1rem;
 }
-.FooterMain{
-  position: relative;
-  flex: 0 0 100%;
-  width:75%;
-  height: 10%;
-  right: 22%;
+.Main-Label-Att{
+  text-align: center;
 }
-.Main-Title-Footer{
-  position: relative;
-  bottom: 25%;
-  margin-right: 27%;
-  padding-top:15px;
+.Main-Return-Link{
+  color:#555;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 2px;
+  margin-right: 5px;
+}
+.Main-Return-Link:hover{
+  background:#b6b6b6;
 }
 /*Form Login With Attributes*/
 .FormLogin{
-  position: absolute;
-  width: 80%;
-  height: 50%;
-  margin-top: 20px;
-  margin-right: 32px;
+  margin: 0;
+  padding: 0;
 }
 .FormLogin input[type=text]{
   font-size: 15px;
-  width: 100%;
+  width: 60%;
   height: 50px;
   text-indent: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 .FormLogin input[type=password]{
   font-size: 15px;
-  width: 100%;
+  width: 60%;
   height: 50px;
   text-indent: 50px;
-  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 .FormLogin input[type=submit]{
-  width: 100%;
+  width: 60%;
   height: 50px;
   border: none;
   outline: none;
-  margin-top: 25px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
   color: #555;
   font-size: 20px;
   font-weight: 600;
   cursor: pointer;
+  margin-top: 20px;
+}
+.FormLogin input[type=checkbox]{
+  margin-right: 6px;
+}
+.FormLogin label{
+  display:inline-block ;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: 15px;
+}
+.Label-Login-Att{
+  text-align: center;
+}
+.Padding-Login{
+  margin-bottom: 1.5rem;
 }
 .FormLogin input[type=submit]:hover{
   background:#b6b6b6;
@@ -155,87 +202,86 @@ body {
   margin: 15px;
   font-size: 15px;
 }
-.IconInputBox{
+.Icon-Login{
   position: absolute;
-  width: 50px;
-  height: 50px;
-}
-.icon-Login{
   font-size: 1.5em;
   color: #555;
+  margin-left: auto;
+  margin-right: 22%;
   margin-top: 12px;
-  margin-right: 15px;
+  display: block;
 }
-.icon-Pass{
+.Icon-Login-Pass{
+  position: absolute;
   font-size: 1.5em;
   color: #555;
-  margin-top:35px;
-  margin-right: 15px;
-}
-.FormFooter{
-  width: 100%;
-  height: 50px;
-}
-.Footer-Text{
-  position: absolute;
-  padding-top: 5px;
-  color:#555;
-  font-size: 16px;
-}
-.FooterForgot{
-  position: absolute;
-  right:70%;
-  padding-top: 5px;
-  color:#555;
-  font-size: 16px;
-  font-weight: 600;
-}
-.FormLogin input[type=checkbox]{
-  margin-top: 9px;
-  margin-right: 95%;
+  margin-left: auto;
+  margin-right: 22%;
+  margin-top: 37px;
+  display: block;
 }
 /*Form Forgot Password With Attributes*/
 .FormForgot{
-  position: absolute;
-  width: 80%;
-  height: 50%;
-  margin-top: 20px;
-  margin-right: 32px;
+  margin: 0;
+  padding: 0;
 }
 .FormForgot input[type=password]{
   font-size: 15px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   text-indent: 50px;
-  margin-top: 25px;
+  margin-top: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
 }
 .FormForgot input[type=text]{
   font-size: 15px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   text-indent: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  display: block;
 }
 .FormForgot input[type=submit]{
-  position: relative;
-  width: 49%;
-  height: 41px;
+  width: 50%;
+  height: 40px;
   border: none;
   outline: none;
-  margin-top: 11px;
+  margin-top: 15px;
   color: #555;
   font-size: 18px;
   font-weight: 600;
-  left: 4px;
   cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
 .FormForgot input[type=submit]:hover{
   background:#b6b6b6;
 }
-#ReturnLog{
-  margin-top: 76%;
-}
 .ReturnLogin:hover{
   background:#b6b6b6;
+}
+.Icon-Forgot{
+  position: absolute;
+  font-size: 1.5em;
+  color: #555;
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 12px;
+  display: block;
+}
+.Icon-Forgot-Pass{
+  position: absolute;
+  font-size: 1.5em;
+  color: #555;
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 27px;
+  display: block;
 }
 .ForgetButton{
   font-size: 15px;
@@ -245,84 +291,108 @@ body {
 .ForgetButton:hover{
   background:#b6b6b6;
 }
+.PaddingForget{
+  margin-bottom: 1.5rem;
+}
 /*Form Register With Attributes*/
 .RegistarText{
-  margin-top: 15px;
-  font-size: 15px;
+  position: relative;
   color:#555;
+  right: 20%;
 }
 .RegistarButton{
   width: 75px;
-  height: 20px;
   outline: none;
   border: none;
   font-size:15px;
-  margin-right: 97px;
   color:#555;
   background-color: #dfdede;
   text-decoration: none;
-  padding:7px 9px;
+  padding: 3px;
+  margin-right: 10px;
 }
-
 .RegistarButton:hover{
   background:#b6b6b6;
 }
-.RegisterBox{  
-  position: relative;
-  background: white;
-  width: 60%;
-  height: 420px;
-  margin-right: 50%;
-}
 .FormRegister{
-  position: absolute;
-  width: 80%;
-  height: 50%;
-  margin-top: 5px;
-  margin-right: 32px;
+  margin: 0;
+  padding: 0;
 }
 .FormRegister input[type=text],[type=email]{
   font-size: 15px;
-  width: 100%;
+  width: 50%;
   height: 35px;
-  text-indent: 10px;
+  text-indent: 45px;
   margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Padding-Input{
+  padding-right: 10px;
 }
 .FormRegister input[type=password]{
   font-size: 15px;
   width: 50%;
   height: 35px;
-  text-indent: 10px;
+  text-indent: 45px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 15px;
 }
 .FormRegister input[type=submit]{
-  width: 49%;
-  height: 41px;
+  width: 50%;
+  height: 40px;
   border: none;
   outline: none;
-  margin-top: 11px;
   color: #555;
   font-size: 18px;
   font-weight: 600;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
 }
 .FormRegister input[type=submit]:hover{
   background:#b6b6b6;
 }
-.ReturnLogin{
-  position: relative;
-  font-size: 18px;
-  font-weight: 600;
-  margin-right: 4px;
-  right:1px;
-  padding-right:32px;
-  padding-left: 32px;
-  padding-top:10px;
-  padding-bottom: 10px;
-  color:#555;
-  background-color: #d6d6d6;
-  text-decoration: none;
+.FormRegister label{
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
 }
+
+/* Attributes For Register Icons */
+.Icon-Register{
+  position: absolute;
+  font-size: 1.5em;
+  color: #555;
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 20px;
+  display: block;
+}
+.Icon-Username{
+  position: absolute;
+  font-size: 1.5em;
+  color: #555;
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 6px;
+  display: block;
+}
+.Icon-Register-Password{
+  position: absolute;
+  font-size: 1.5em;
+  color: #555;
+  margin-left: auto;
+  margin-right: 27%;
+  margin-top: 14px;
+  display: block;
+}
+
 /*Main Header of all Pages*/
 .header-desktop {
   background: #f5f5f5;
@@ -347,11 +417,10 @@ body {
 .NotiBox {
   position: absolute;
   background: #fff;
-  width: 300px;
-  height: 350px;
-  margin-top: 6%;
-  margin-right: 68%;
   border: 1px solid #e5e5e5;
+  left:0;
+  margin-top: 20px;
+  margin-left: 67px;
 }
 .NotiBox:before {
   content: "";
@@ -401,29 +470,30 @@ body {
   display: flex;
 }
 .AccBox{
+  height: 200px;
+  width: 150px;
   position: absolute;
   background: #fff;
-  width: 200px;
-  height: 300px;
-  margin-top: 6%;
-  margin-right: 80%;
   border: 1px solid #e5e5e5;
+  left:0;
+  margin-left:32px;
+  margin-top: 20px;
+  flex:0 0 25%;
 }
 /*all The Object in Main Header*/
+.Object-Att{
+  display: flex;
+  margin-top: 25px;
+  margin-left: 50px;
+}
 .Accname {
-  position: fixed;
   font-size: 18px;
   color: #333;
   font-family: Trebuchet, sans-serif;
   font-weight: 600;
-  margin-right: 145px;
-  margin-top: 13px;
 }
 .icon-acc {
-  position: fixed;
   color: #333;
-  margin-right: 280px;
-  margin-top: 15px;
   border: none;
   outline: none;
   background-repeat: no-repeat;
@@ -431,16 +501,15 @@ body {
   cursor: pointer;
 }
 .Notifications {
-  position: fixed;
   color: #555;
   font-size: 1.5em;
   border: none;
   outline: none;
-  margin-right: 100px;
-  margin-top: 11px;
   background-repeat: no-repeat;
   background-color: transparent;
   cursor: pointer;
+  margin-right:auto;
+  padding-left:15px;
 }
 .Notifications:hover{
   color: #6e6e6e;
@@ -459,9 +528,9 @@ body {
   overflow-y: auto;
 }
 .sidebar .logo {
+  position: relative;
   background: #f5f5f5;
   padding: 0 35px;
-  position: relative;
   height: 75px;
   margin: 0;
   top: 0;
@@ -513,25 +582,6 @@ li#selected a {
 .IconPadding{
   padding-right:10px;
 }
-/*The Attributes of the container in all pages*/
-.PageContainer {
-  padding-right: 300px;
-}
-.ContainerSize {
-  padding: 0 30px;
-}
-.ContentInfo {
-  width: 100%;
-  padding-right: 12px;
-  padding-left: 12px;
-  margin-right: auto;
-  margin-left: auto;
-}
-.MainContent {
-  padding-top: 116px;
-  min-height: 100vh;
-  overflow: auto;
-}
 /*heading 2,3,4 Attributes */
 h2 {
   color: #555;
@@ -552,25 +602,21 @@ h4 {
   font-size: 20px;
 }
 /*The Attributes of the Dashboard page*/
-.MainPad {
-  padding: 35px;
-  margin-right: -35px;
-  display:flex;
+.DashBoard-Margin{
+  margin-top: 40px;
 }
-.BoxsAtt {
-  width: 100%;
+.Dash-Box-Att{
   height: 300px;
   display: flex;
   flex-wrap: wrap;
 }
 .BoxInfo {
-  padding: 5px;
-  width: 20%;
-  height: 75%;
-  margin-top: 20px;
   border-radius: 20px;
-  margin-right:52px;
-  padding-bottom: 40px;
+  max-height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding:12px 12px;
+  flex:0 0 20%;
 }
 #ClientDesign {
   background-image: linear-gradient(90deg, #3f5efb 0%, #fc466b 100%);
@@ -592,13 +638,11 @@ h4 {
   background-image: linear-gradient(90deg, #ee0979 0%, #ff6a00 100%);
   background-image: linear-gradient(360deg, #ee0979 0%, #ff6a00 100%);
 }
-.icon {
-  padding:15px 15px 0 15px;
+.DashBoard-Icon {
   color: white;
   text-decoration:none;
 }
-.text {
-  padding:15px;
+.DashBoard-Text {
   color: white;
   font-family: Georgia, serif;
   font-weight: bold;
@@ -606,20 +650,12 @@ h4 {
   text-decoration:none;
 }
 .BoxStat{
-  width: 43%;
-  height: 400px;
+  height: 300px;
   background: white;
   border-radius: 10px;
-  float:right;
-  margin-right: 52px;
-}
-.BoxSubscription{
-  width: 43%;
-  height: 400px;
-  background: white;
-  border-radius: 10px;
-  float: right;
-  margin-right: 55px;
+  margin-left: auto;
+  margin-right: auto;
+  flex:0 0 45%;
 }
 .BoxTitle{
   font-size: 20px;
@@ -631,155 +667,98 @@ h4 {
   font-size: 22px;
   font-weight: 600;
   color:#555;
-  margin-right: 52px;
-  float:right;
-  padding-top:50px;
+  margin-top: 25px;
+  margin-right: 30px;
 }
 .BoxNewClients{
-  width: 91%;
-  height: 400px;
+  height:350px;
   background: white;
-  float: right;
-  margin-right: 52px;
-  margin-top: 2%;
+  margin-top: 25px;
   border-radius:10px;
+  margin-left: auto;
+  margin-right:auto;
+  flex: 0 0 95%;
 }
 .ClientTitle{
-  width: 100%;
   height: 75px;
   background: #333;
 }
-table{
-  color:white;
-  max-width: 100%;
-}
 /*The Attributes of the box inside pages: Customers,Nclients,HealthP*/
 .header-Form {
-  width: 100%;
-  height: 75px;
   background: #f5f5f5;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
-.FormN {
-  position: absolute;
-  width:75%;
-  height: 620px;
+.Flex-Pages{
+  display:flex;
+  flex-wrap:wrap;
+  height: 400;
+}
+.FormData {
+  height: 500px;
   background: #fff;
+  margin: 0 auto;
+  flex:0 0 75%;
+}
+.FormClient{
+  background: #fff;
+  max-width: 540px;
+  margin: 0 auto;
+}
+.Header-Client {
+  background: #f5f5f5;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
 }
 /*The Attributes of the Statistics page*/
-.Fontstat {
-  margin-top: 5px;
-  color: #555;
+.Flex-Statistic{
+  display:flex;
+  flex-wrap:wrap;
+  height: 350px;
+}
+.StatisticInfo {
+  max-width: 540px;
+  background: white;
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:40px;
+  flex: 0 0 50%;
 }
 .HeaderStat {
   background: #333;
   box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  width: 565px;
   height: 75px;
 }
-#HeaderHand {
-  background: #333;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  top: -374px;
-  right: 580px;
-  width: 565px;
-  height: 75px;
-}
-#HeaderChest {
-  background: #333;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  top: 20px;
-  right: 0px;
-  width: 565px;
-  height: 75px;
-}
-#HeaderAbs {
-  background: #333;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-  top: -375px;
-  right: 580px;
-  width: 565px;
-  height: 75px;
+.Statistic-Header-Att{
+  padding:10px;
 }
 .Iconstat {
   position: absolute;
   margin-right: 12px;
   color: #fff;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.5em;
   display: inline-block;
 }
-.Header-Att{
-  padding-top:10px;
-  display: flex;
-}
-.StatisticInfo {
-  width: 565px;
-  height: 320px;
-  background: white;
-}
-
-.StatisticInfo-Margin{
-  margin-right:0px;
-}
-.StatisticInfo-Att{
-  margin-right:15px;
-}
-#FontStatistic {
-  margin-right: 20px;
-  margin-top: 20px;
-}
 /*The Attributes of New Client Page*/
-.NewClientForm {
-  margin-right:17%;
-  margin-top:20px;
-  width: 65%;
-  height: 82%;
-  background: #f5f5f5;
-  border-right: 1px solid #e5e5e5;
-}
-.PageTitle {
+.Nclient-FormAtt {
   color: #555;
-  font-size: 30px;
-  font-family: Georgia, serif;
-  z-index: 3;
-  text-align: center;
-  font-weight: 600;
-}
-.FormAtt {
-  color: #555;
-  margin-right: 10%;
-  font-family: Georgia, serif;
   font-weight: bold;
   font-size: 16px;
-  align-items: center;
+  margin:0;
+  padding: 1.25rem;
 }
-.FormPadding {
-  padding-top: 30px;
-  padding-right:5%;
-  padding-left: 5%;
+.Form-Flex{
+  flex-wrap: wrap;
+  display:flex;
 }
-.inputPadding {
-  padding-top: 30px;
-  padding-right:5%;
-  padding-left: 5%;
+.Nclient-FormAtt input[type=text]{
+  width:40%;
+  height: 30px;
+  text-indent:20px;
+  margin-right: auto;
+  margin-left:auto;
+  margin-top: 15px;
 }
-.FormAtt label {
-  padding-left: 7px;
-  font-size: 18px;
-}
-.TextAttributes {
-  padding-left: 20px;
-  font-size: 18px;
-}
-.FormAtt label::before {
-  content: "*";
-  color: red;
-}
-.textPadding{
-  padding-right:7px;
-}
-.FormAtt input[type=submit]{
+.Nclient-FormAtt input[type=submit]{
   font-size: 18px;
   font-family: Georgia, serif;
   width: 120px;
@@ -787,60 +766,76 @@ table{
   border: none;
   outline:none;
   font-weight: 600;
-  margin-right: 28%;
   cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }
-.FormAtt input[type=date]{
-  width: 23.4%;
-}
-.TextAttributes input[type="radio"]{
-  margin-right: 10px;
+.Nclient-FormAtt input[type="radio"]{
   cursor: pointer;
+  margin-right: 5px;
+}
+.Radio-Text{
+  display: inline-block;
+  color:#555;
+  margin-right: 15px;
+}
+.Nclient-FormAtt label{
+  color:#555;
+  padding: 12px 27px 12px 0;
+  display: inline-block;
 }
 /*The Attributes of the ExePlan page*/
 .ExeMain{
-  width: 80%;
-  height:500px;
-  margin-top: 20px;
-  margin-right: 10%;
+  max-width: 75%;
+  margin: 0 auto;
   background: #f5f5f5;
 }
 .ExeForm{
-  width: 80%;
-  height: 75px;
-  margin-top: 40px;
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  margin:0;
+  padding: 1.25rem;
+}
+.Exe-Flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+.ExePadding{
+  padding-bottom: 2rem
 }
 .ExeForm input[type=text]{
   width: 30%;
-  height:60%;
-  margin-top: 5%;
-  margin-right: 26%;
+  height:30px;
   text-indent: 10px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .ExeForm select{
   width: 30%;
-  height:60%;
+  height:30px;
   text-indent: 10px;
-  margin-right: 10%;
   color:#6e6e6e;
   font-size: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .ExeDays{
-  position: relative;
-  width: 90%;
-  height: 340px;
-  margin-right: 3.7%;
-  margin-top: 5%;
+  height: 300px;
+  display:flex;
   flex-wrap: wrap;
 }
 .ExeBoxs{
-  position: absolute;
-  margin-top: 10px;
-  width: 105px;
-  height: 240px;
+  max-height: 240px;
   border: none;
   outline:none;
+  padding:12px 12px;
   border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  flex: 0 0 12%;
+
 }
 #SundayDesign {
   background-image: linear-gradient(90deg, #d2fb3f 0%, #fc466b 100%);
@@ -851,47 +846,39 @@ table{
   background-image: linear-gradient(90deg, #2fccbf 0%, #24f708 100%);
   background-image: linear-gradient(90deg, #2fccbf 0%, #24f708 100%);
   background-image: linear-gradient(360deg, #2fccbf 0%, #24f708 100%);
-  margin-right: 15%;
 }
 #TuesdayDesign {
   background-image: linear-gradient(90deg, #fa2424 0%, #ffa600 100%);
   background-image: linear-gradient(90deg, #fa2424 0%, #ffa600 100%);
   background-image: linear-gradient(360deg, #fa2424 0%, #ffa600 100%);
-  margin-right: 30%;
 }
 #WednesdayDesign {
   background-image: linear-gradient(90deg, #ee0979 0%, #a7366a 100%);
   background-image: linear-gradient(90deg, #ee0979 0%, #a7366a 100%);
   background-image: linear-gradient(360deg, #ee0979 0%, #a7366a 100%);
-  margin-right: 45%;
 }
 #ThursdayDesign {
   background-image: linear-gradient(90deg, #fbff04 0%, #00aeff 100%);
   background-image: linear-gradient(90deg, #fbff04 0%, #00aeff 100%);
   background-image: linear-gradient(360deg, #fbff04 0%, #00aeff 100%);
-  margin-right: 60%;
 }
 #FridayDesign {
   background-image: linear-gradient(90deg, #fbff04 0%, #22ff05 100%);
   background-image: linear-gradient(90deg, #fbff04 0%, #22ff05 100%);
   background-image: linear-gradient(360deg, #fbff04 0%, #22ff05 100%);
-  margin-right: 75%;
 }
 #SaturdayDesign {
   background-image: linear-gradient(90deg, #d400ff 0%, #ff6a00 100%);
   background-image: linear-gradient(90deg, #d400ff 0%, #ff6a00 100%);
   background-image: linear-gradient(360deg, #d400ff 0%, #ff6a00 100%);
-  margin-right: 90%;
 }
 .DaysText{
   color: white;
   font-size: 18px;
-  margin-bottom: 200px;
   font-weight: 600;
   text-decoration: none;
   display: inline-block;
-  margin-right: 15px;
-  margin-top: 5px;
+  box-sizing: border-box;
 }
 .FormMuscles{
   width: 100%;
@@ -899,12 +886,7 @@ table{
   border: 1px solid #e5e5e5;
   display: block;
 }
-.FormMuscles input[type="checkbox"]{
-  position: relative;
-  margin-right: 10px;
-  top:2px;
-  cursor: pointer;
-}
+
 .TextMuscles{
   position: relative;
   font-size: 16px;
@@ -937,12 +919,10 @@ table{
   top:20px;
 }
 .ExeAttributes{
-  position: absolute;
-  width: 100%;
   height: 300px;
   margin-right: 55px;
   overflow: auto;
-  display: inline-block;
+  display: flex;
 }
 .ExeButtons{
   width: 240px;
@@ -962,6 +942,27 @@ table{
   background: #9a9a9a;
 }
 /*Attributes of BuildPlan page*/
+.Form-Plan{
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  margin:0;
+  padding: 1.25rem;
+}
+.Plan-Flex{
+  display:inline-block;
+  flex-wrap: wrap;
+}
+.Plan-Flex input[type="checkbox"]{
+  margin-right: 10px;
+  cursor: pointer;
+}
+.Build-Exe-Header{
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color:#555;
+}
 .PlanBox{
   width: 80%;
   height: 500px;
@@ -969,26 +970,25 @@ table{
   margin-right: 10%;
   background: #f5f5f5;
 }
+.Plan-Padding{
+  padding-bottom: 2rem;
+}
 .PlanHeader{
-  position: relative;
   font-size: 30px;
   color:#555;
-  margin-right: 37%;
-  width: 80%;
-  height: 60px;
-  margin-top: 10px;
+  text-align: center;
   font-weight: 600;
-  padding-top: 10px;
+  padding: 10px;
 }
 .BackPage{
-  position: absolute;
   width: 80px;
-  height: 30px;
-  left:30%;
+  height: 25px;
   color:#555;
   font-size:16px;
-  bottom:10px;
   text-decoration: none;
+  float:left;
+  margin-left: 10px;
+  margin-top: 7px;
 }
 .BackPage:hover{
   color: #333;
@@ -1116,27 +1116,26 @@ table{
   outline:none ;
 }
 /*Attributes of Updates page*/
-.UpdateBox{
-  width: 85%;
-  height: 450px;
-  background: white;
-  float: right;
-  margin-right: 10%;
+.Form-Update{
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  margin:0;
+  padding: 1.25rem;
 }
-.HeaderUpdateBox{
-  width: 100%;
-  height: 75px;
-  background: #f5f5f5;
-}
-.formUpdate{
-  margin-top: 2%;
-  margin-right: 13%;
-}
-.formUpdate input[type="text"]{
+.Form-Update input[type="text"]{
+  width: 60%;
+  height: 40px;
   font-size: 16px;
   color:#555;
+  text-indent:25px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
 }
-.formUpdate input[type="submit"]{
+.Form-Update input[type="submit"]{
   font-family: Trebuchet, sans-serif;
   font-size: 16px;
   width: 120px;
@@ -1144,41 +1143,33 @@ table{
   border: none;
   outline:none;
   font-weight: 600;
-  margin-right: 30%;
   cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
-.formUpdate label{
-  padding: 5px;
-  font-weight: 400;
-}
-.formUpdate label::before {
-  content: "*";
-  color: red;
+.Form-Update label{
+  text-align: center;
+  font-weight: 600;
+  display: block;
 }
 textarea{
   width: 50%;
   height: 150px;
-  margin-right: 14%;
-}
-.UpdateText{
-  font-size: 16px;
-  color: #555;
-  font-weight: 600;
-  margin-right: 30%;
-  padding-top: 5px;
-}
-.PaddingText{
-  padding-top: 10px;
+  display:block;
+  margin-right: auto;
+  margin-left: auto;
 }
 /*Attributes of scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
-/*::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-}*/
+}

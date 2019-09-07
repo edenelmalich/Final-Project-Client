@@ -3,9 +3,9 @@ import "../css/CssFont.css";
 import logo from "../logo.png";
 import mainback from "../mainback.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faUser as FasUser} from "@fortawesome/free-regular-svg-icons";
-import { faUser, faLock} from "@fortawesome/free-solid-svg-icons";
-import { NavLink } from 'react-router-dom';
+import { faUser as FasUser } from "@fortawesome/free-regular-svg-icons";
+import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import { NavLink } from "react-router-dom";
 
 class Mainpage extends Component {
   render() {
@@ -15,62 +15,61 @@ class Mainpage extends Component {
         <header>
           <img className="Mainlogo" src={logo} alt="Logo" />
         </header>
-        <div className="MainpageContainer">
-          <header className="MainTitle">תוכנה לניהול חדר כושר</header>
-          <div className="Mainobject">
+        <header className="MainTitle">תוכנה לניהול חדר כושר</header>
+        <div className="Main-Wrap">
+          <div className="Main-Box">
             <header className="MainHeader">
-              <div className="HeaderText">Maxfit Gym</div>
-              </header>
-              <div className="Loginbox">
-                <div className="LoginAtt">
-                  <FontAwesomeIcon className="IconLogin" icon={FasUser} />
-                  <header className="LoginHeader"> התחברות</header>
-                  <form className="FormLogin">
-                    <span className="IconInputBox">
-                      <FontAwesomeIcon className="icon-Login" icon={faUser} />
-                    </span>
-                    <input
-                      type="text"
-                      name="username"
-                      placeholder="שם משתמש"
-                      required
-                    />
-                    <div className="IconInputBox">
-                      <FontAwesomeIcon className="icon-Pass" icon={faLock} />
-                    </div>
-                    <input
-                      type="password"
-                      name="Password"
-                      placeholder="סיסמא"
-                      required
-                    />
-                    <input type="submit" name="Password" value="התחברות" />
-                    <div className="FormFooter">
-                      <span className="Footer-Text">
-                        <NavLink to='/forgotPass'
-                          className="ForgetButton"
-                        >
-                          שכחת את הסיסמה?
-                        </NavLink>
-                      </span>
-                      <span className="FooterForgot">זכור אותי</span>
-                      <input type="checkbox" name="forget" value="Remember" />
-                      <hr />
-                      <div className="RegistarText">
-                        אין לך משתמש?
-                        <NavLink to="/registarApp"
-                          className="RegistarButton"
-                        >
-                          הירשם כעת
-                        </NavLink>
-                      </div>
-                    </div>
-                  </form>
+              <div className="Main-HeaderText">Maxfit Gym</div>
+            </header>
+            <div className="MainAtt">
+              <FontAwesomeIcon className="Main-Icon" icon={FasUser} />
+              <header className="Main-Title"> התחברות</header>
+              <form className="FormLogin">
+                <FontAwesomeIcon className="Icon-Login" icon={faUser} />
+                <input
+                  type="text"
+                  name="username"
+                  placeholder="שם משתמש"
+                  required
+                />
+                <FontAwesomeIcon className="Icon-Login-Pass" icon={faLock} />
+                <div className="Padding-Login"></div>
+                <input
+                  type="password"
+                  name="Password"
+                  placeholder="סיסמא"
+                  required
+                />
+                <input type="submit" name="Password" value="התחברות" />
+                <div className="Padding-Login"></div>
+                <div className="Main-Border"></div>
+                <div className="Label-Login-Att">
+                  <NavLink to="/forgotPass" className="ForgetButton">
+                    <div className="Main-Padding"></div>
+                    שכחת את הסיסמה?
+                  </NavLink>
+                  <label>
+                    זכור אותי?
+                    <input type="checkbox" name="forget" value="Remember" />
+                  </label>
                 </div>
-              </div>
+                <div className="Main-Padding"></div>
+                <div className="Main-Border"></div>
+                <div className="Main-Padding"></div>
+                <div className="Label-Login-Att">
+                  <label>אין לך משתמש?</label>
+                  <NavLink to="/registarApp" className="RegistarButton">
+                    הירשם כעת
+                  </NavLink>
+                </div>
+                <div className="Main-Padding"></div>
+              </form>
+            </div>
           </div>
-          <div className="FooterMain">
-            <div className="Main-Title-Footer">Final Project By Eden Elmalich</div>
+        </div>
+        <div className="Footer-Pages">
+          <div className="Main-Title-Footer">
+            Final Project By Eden Elmalich
           </div>
         </div>
       </div>
