@@ -1,7 +1,7 @@
 /*Attribute for all the Pages*/
 body {
   direction: rtl;
-  font-family: Trebuchet, sans-serif;
+  font-family: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; 
   background: #e5e5e5;
   margin: 0;
 }
@@ -72,7 +72,6 @@ body {
   position: relative;
   color:#555;
   font-size: 30px;
-  font-family: Trebuchet, sans-serif;
   font-weight: 600;
   text-align: center;
 }
@@ -118,7 +117,6 @@ body {
 .Main-Title{
   color: #555;
   font-size: 22px;
-  font-family: Trebuchet, sans-serif;
   font-weight: 600;
   padding: 10px;
   text-align: center; 
@@ -458,13 +456,11 @@ body {
   padding: 22px;
   border-bottom: 1px solid #f2f2f2;
   color: #555;
-  font-family: Trebuchet, sans-serif;
   font-weight: 600;
 }
 .Notification-item {
   border-bottom: 1px solid #f2f2f2;
   color: #555;
-  font-family: Trebuchet, sans-serif;
   padding: 19px 22px;
   padding-bottom: 14px;
   display: flex;
@@ -489,7 +485,6 @@ body {
 .Accname {
   font-size: 18px;
   color: #333;
-  font-family: Trebuchet, sans-serif;
   font-weight: 600;
 }
 .icon-acc {
@@ -585,19 +580,16 @@ li#selected a {
 /*heading 2,3,4 Attributes */
 h2 {
   color: #555;
-  font-family: Trebuchet, sans-serif;
 }
 h3 {
   color: #555;
   margin-right: 5px;
-  font-family: Trebuchet, sans-serif;
   font-size: 20px;
   padding: 25px 10px;
 }
 h4 {
   color: #fff;
   margin-right: 12px;
-  font-family: Trebuchet, sans-serif;
   display: inline-block;
   font-size: 20px;
 }
@@ -644,7 +636,6 @@ h4 {
 }
 .DashBoard-Text {
   color: white;
-  font-family: Georgia, serif;
   font-weight: bold;
   font-size: 20px;
   text-decoration:none;
@@ -760,7 +751,6 @@ h4 {
 }
 .Nclient-FormAtt input[type=submit]{
   font-size: 18px;
-  font-family: Georgia, serif;
   width: 120px;
   height: 30px;
   border: none;
@@ -918,29 +908,6 @@ h4 {
   right: 27%;
   top:20px;
 }
-.ExeAttributes{
-  height: 300px;
-  margin-right: 55px;
-  overflow: auto;
-  display: flex;
-}
-.ExeButtons{
-  width: 240px;
-  height: 75px;
-  margin-right: 8px;
-  margin-top: 5px;
-  color:#555;
-  background: #d6d6d6;
-  font-weight: 600;
-  font-size:14px;
-  display:inline-block;
-  text-align: center;
-  padding-top: 10px;
-  cursor: pointer;
-}
-.ExeButtons:hover{
-  background: #9a9a9a;
-}
 /*Attributes of BuildPlan page*/
 .Form-Plan{
   color: #555;
@@ -950,18 +917,44 @@ h4 {
   padding: 1.25rem;
 }
 .Plan-Flex{
-  display:inline-block;
+  display:flex;
   flex-wrap: wrap;
-}
-.Plan-Flex input[type="checkbox"]{
-  margin-right: 10px;
-  cursor: pointer;
 }
 .Build-Exe-Header{
   font-size: 20px;
   font-weight: 600;
   text-align: center;
   color:#555;
+}
+.Form-Plan input[type="checkbox"]{
+  cursor: pointer;
+  margin-right: 3px;
+}
+.Form-Plan label{
+ margin-right:25px;
+}
+.Display-Button{
+  height: 200px;
+  flex-wrap: wrap;
+  display: flex;
+}
+.Plan-Button{
+  height: 50px;
+  padding:12px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: #cfcfcf;
+  text-align: center;
+  color:#555;
+  font-weight: 600;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  flex: 0 0 30%;
+}
+.Plan-Button:hover{
+  background: #9a9a9a;
 }
 .PlanBox{
   width: 80%;
@@ -981,14 +974,14 @@ h4 {
   padding: 10px;
 }
 .BackPage{
+  position: absolute;
   width: 80px;
   height: 25px;
   color:#555;
   font-size:16px;
   text-decoration: none;
-  float:left;
-  margin-left: 10px;
-  margin-top: 7px;
+  left:20%;
+  margin-top: 15px;
 }
 .BackPage:hover{
   color: #333;
@@ -996,7 +989,7 @@ h4 {
 .quantity{
   position: absolute;
   display: inline-block;
-  left:17%;
+  left:23%;
   padding-top: 2px;
   height: 18px;
   width:18px;
@@ -1009,22 +1002,9 @@ h4 {
   border-radius: 100%;
   font-size: 12px;
 }
-.ListBox{
-  position: absolute;
-  width: 300px;
-  height: 430px;
-  background: #555;
-  margin-top:4%;
-  left: 7%;
-  border-bottom: 1px solid #f2f2f2;
-  z-index:3; 
-}
-
 /*Attributes of icon Exercises List and List Box*/
 .iconList{
-  float:left;
-  margin-left:10%;
-  margin-top:2%;
+  position: absolute;
   font-size: 30px;
   color:#555;
   cursor: pointer;
@@ -1032,6 +1012,32 @@ h4 {
   background-color: transparent;
   outline: none;
   border: none;
+  left:0;
+  margin-top: 15px;
+  margin-left: 22%;
+  display:inline-block;
+}
+.ListBox-Att{
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+  margin:0;
+  padding: 1.25rem;
+}
+.List-Box-Flex{
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.ListBox{
+  position: absolute;
+  width: 24%;
+  height: 400px;
+  background: #555;
+  margin-top:5%;
+  border-bottom: 1px solid #f2f2f2;
+  z-index:3; 
+  left:10%;
 }
 .ListBox::before{
   content: "";
@@ -1045,14 +1051,43 @@ h4 {
   position: absolute;
   top: -17px;
   float:left;
-  right:45%;
+  right:44%;
   z-index: 3;
 }
-.itemsBox{
-  position: relative;
-  width:300px;
-  height: 310px;
-  overflow:auto;
+.HeaderList{
+  color:#fff;
+  font-size:22px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 7px;
+}
+.ListBox-Button-Display{
+  display: flex;
+  flex-wrap: wrap;
+  height: 25px;
+}
+.Buttons-ListBox{
+  color:#333;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline:none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  flex:0 0 48%;
+}
+.ExercisesText-Att{
+  overflow: auto;
+}
+.ExercisesText{
+  border-bottom: 1px solid #f2f2f2;
+  color: #fff;
+  padding: 15px 15px;
+  padding-bottom: 14px;
+  display: flex;
 }
 .Closeitem{
   position: absolute;
@@ -1061,15 +1096,7 @@ h4 {
   transform: rotate(45deg);
   cursor: pointer;
 }
-.HeaderList{
-  color:#fff;
-  font-size:22px;
-  text-align: center;
-  margin-top:5px;
-  font-weight: 600;
-  border-bottom: 1px solid #f2f2f2;
-  padding: 12px;
-}
+
 .HeaderMuscle{
   color:#fff;
   font-size:22px;
@@ -1078,42 +1105,6 @@ h4 {
   font-weight: 600;
   border-bottom: 1px solid #f2f2f2;
   padding: 12px;
-}
-.ExercisesText{
-  border-bottom: 1px solid #f2f2f2;
-  color: #fff;
-  padding: 19px 22px;
-  padding-bottom: 14px;
-  display: flex;
-}
-.ListBoxFooter{
-  position: relative;
-  widows: 300px;
-  height: 65px;
-}
-.ButtonSave{
-  position: relative;
-  margin-top: 5%;
-  margin-right: 5%;
-  width: 130px;
-  color:#333;
-  height: 35px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  outline:none ;
-}
-.ButtonClose{
-  position: relative;
-  margin-top: 5%;
-  margin-right: 3%;
-  width: 130px;
-  color:#333;
-  height: 35px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  outline:none ;
 }
 /*Attributes of Updates page*/
 .Form-Update{
@@ -1136,7 +1127,6 @@ h4 {
 
 }
 .Form-Update input[type="submit"]{
-  font-family: Trebuchet, sans-serif;
   font-size: 16px;
   width: 120px;
   height: 30px;
