@@ -776,6 +776,9 @@ h4 {
   display: inline-block;
 }
 /*The Attributes of the ExePlan page*/
+.ExePadding{
+  padding-bottom: 2rem
+}
 .ExeMain{
   max-width: 75%;
   margin: 0 auto;
@@ -791,9 +794,6 @@ h4 {
 .Exe-Flex{
   display: flex;
   flex-wrap: wrap;
-}
-.ExePadding{
-  padding-bottom: 2rem
 }
 .ExeForm input[type=text]{
   width: 30%;
@@ -870,45 +870,23 @@ h4 {
   display: inline-block;
   box-sizing: border-box;
 }
-.FormMuscles{
-  width: 100%;
-  height: 75px;
-  border: 1px solid #e5e5e5;
-  display: block;
-}
-
-.TextMuscles{
-  position: relative;
-  font-size: 16px;
-  margin-right: 15px;
-  color: #555;
-  top: 25px;
-}
-.ExeBox{
-  position: fixed;
-  margin-top:20px;
-  width: 57%;
-  height: 350px;
-  right:31.5%;
-}
-.HeaderBox{
-  position: relative;
-  width: 300px;
-  height: 75px;
-  margin-right: 28%;
-  margin-top:30px;
-}
-.ExeHeader{
-  position: absolute;
-  width: 250px;
-  height: 50px;
-  font-size: 20px;
-  color: #555;
-  font-weight: 600;
-  right: 27%;
-  top:20px;
-}
 /*Attributes of BuildPlan page*/
+.Plan-Padding{
+  padding-bottom: 2rem;
+}
+.BackPage{
+  position: absolute;
+  width: 80px;
+  height: 25px;
+  color:#555;
+  font-size:16px;
+  text-decoration: none;
+  left:20%;
+  margin-top: 15px;
+}
+.BackPage:hover{
+  color: #333;
+}
 .Form-Plan{
   color: #555;
   font-weight: bold;
@@ -963,9 +941,6 @@ h4 {
   margin-right: 10%;
   background: #f5f5f5;
 }
-.Plan-Padding{
-  padding-bottom: 2rem;
-}
 .PlanHeader{
   font-size: 30px;
   color:#555;
@@ -973,18 +948,20 @@ h4 {
   font-weight: 600;
   padding: 10px;
 }
-.BackPage{
+/*Attributes of icon Exercises List and List Box*/
+.Icon-List{
   position: absolute;
-  width: 80px;
-  height: 25px;
+  font-size: 30px;
   color:#555;
-  font-size:16px;
-  text-decoration: none;
-  left:20%;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  left:0;
   margin-top: 15px;
-}
-.BackPage:hover{
-  color: #333;
+  margin-left: 22%;
+  display:inline-block;
 }
 .quantity{
   position: absolute;
@@ -1002,27 +979,58 @@ h4 {
   border-radius: 100%;
   font-size: 12px;
 }
-/*Attributes of icon Exercises List and List Box*/
-.iconList{
-  position: absolute;
-  font-size: 30px;
-  color:#555;
-  cursor: pointer;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  left:0;
-  margin-top: 15px;
-  margin-left: 22%;
-  display:inline-block;
-}
 .ListBox-Att{
   color: #555;
   font-weight: bold;
   font-size: 16px;
   margin:0;
-  padding: 1.25rem;
+  padding: 1.0rem;
+}
+.HeaderList{
+  color:#fff;
+  font-size:22px;
+  text-align: center;
+  font-weight: 600;
+  border-bottom: 1px solid #f2f2f2;
+  padding: 7px;
+}
+.ExercisesText-Box{
+  height: 290px;
+  overflow: auto;
+}
+.ExercisesText-Att{
+  overflow: auto;
+}
+.ExercisesText{
+  border-bottom: 1px solid #f2f2f2;
+  color: #fff;
+  padding: 15px 15px;
+  padding-bottom: 14px;
+  display: flex;
+}
+.Closeitem{
+  position: absolute;
+  left:35px;
+  font-size:18px;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.ListBox-Button-Display{
+  display: flex;
+  flex-wrap: wrap;
+  height: 25px;
+}
+.Buttons-ListBox{
+  color:#333;
+  height: 35px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  outline:none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  flex:0 0 48%;
 }
 .List-Box-Flex{
   height: 300px;
@@ -1054,58 +1062,7 @@ h4 {
   right:44%;
   z-index: 3;
 }
-.HeaderList{
-  color:#fff;
-  font-size:22px;
-  text-align: center;
-  font-weight: 600;
-  border-bottom: 1px solid #f2f2f2;
-  padding: 7px;
-}
-.ListBox-Button-Display{
-  display: flex;
-  flex-wrap: wrap;
-  height: 25px;
-}
-.Buttons-ListBox{
-  color:#333;
-  height: 35px;
-  font-size: 14px;
-  font-weight: 600;
-  border: none;
-  outline:none;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 5px;
-  flex:0 0 48%;
-}
-.ExercisesText-Att{
-  overflow: auto;
-}
-.ExercisesText{
-  border-bottom: 1px solid #f2f2f2;
-  color: #fff;
-  padding: 15px 15px;
-  padding-bottom: 14px;
-  display: flex;
-}
-.Closeitem{
-  position: absolute;
-  left:8px;
-  font-size:18px;
-  transform: rotate(45deg);
-  cursor: pointer;
-}
 
-.HeaderMuscle{
-  color:#fff;
-  font-size:22px;
-  text-align: center;
-  margin-top:5px;
-  font-weight: 600;
-  border-bottom: 1px solid #f2f2f2;
-  padding: 12px;
-}
 /*Attributes of Updates page*/
 .Form-Update{
   color: #555;

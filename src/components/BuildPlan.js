@@ -357,7 +357,7 @@ class BuildPlan extends Component {
                   <div className="Main-Padding"></div>
                   <div className="Main-Border"></div>
                   <div className="quantity">{this.state.Count}</div>
-                  <button className="iconList" onClick={() => this.ShowList()}>
+                  <button className="Icon-List" onClick={() => this.ShowList()}>
                     <FontAwesomeIcon icon={faClipboardList} />
                   </button>
                   {this.state.OpenList ? (
@@ -365,6 +365,7 @@ class BuildPlan extends Component {
                       <div className="ListBox">
                       <div className="ListBox-Att">
                       <div className="HeaderList">תרגילים שנבחרו</div>
+                      <div className="ExercisesText-Box">
                       {this.state.ChestExercises.map(item => (
                           <div key={item.id}>
                             {item.selected ? (
@@ -484,6 +485,7 @@ class BuildPlan extends Component {
                             ) : null}
                           </div>   
                         ))}
+                        </div>
                       <div className="ListBox-Button-Display">
                         <button className="Buttons-ListBox">שמור תוכנית</button>
                         <button onClick={() => this.CloseBox()}className="Buttons-ListBox">סגור</button>
