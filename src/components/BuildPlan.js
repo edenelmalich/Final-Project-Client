@@ -189,8 +189,7 @@ class BuildPlan extends Component {
       })
     });
   };
-  saveAbs = (id,e)=> {
-    e.preventDefault();
+  saveAbs = id => {
     this.setState({
       AbsExercises: this.state.AbsExercises.map(item => {
         if (id === item.id && item.selected === false) {
@@ -337,9 +336,22 @@ class BuildPlan extends Component {
     this.setState({ OpenList: false });
   }
   render() {
+    const {
+      Count,
+      OpenList,
+      Muscles,
+      ChestExercises,
+      AbsExercises,
+      BackExercises,
+      FHExercises,
+      BHExercises,
+      LegsExercises,
+      ShouldersExercises
+    } = this.state;
+
     return (
       <div className="BuildPlan">
-        <Navbar List={this.state.OpenList} />
+        <Navbar />
         {/* The Attributes of the BuildPlan Page With the Title */}
         <div className="Page-Container">
           <div className="Pages-Content">
@@ -356,143 +368,171 @@ class BuildPlan extends Component {
                   </div>
                   <div className="Main-Padding"></div>
                   <div className="Main-Border"></div>
-                  <div className="quantity">{this.state.Count}</div>
+                  <div className="Quantity">{Count}</div>
                   <button className="Icon-List" onClick={() => this.ShowList()}>
                     <FontAwesomeIcon icon={faClipboardList} />
                   </button>
-                  {this.state.OpenList ? (
-                    <div >
+                  {OpenList ? (
+                    <div>
                       <div className="ListBox">
-                      <div className="ListBox-Att">
-                      <div className="HeaderList">תרגילים שנבחרו</div>
-                      <div className="ExercisesText-Box">
-                      {this.state.ChestExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
+                        <div className="ListBox-Att">
+                          <div className="HeaderList">תרגילים שנבחרו</div>
+                          <div className="ExercisesText-Box">
+                            {ChestExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
+                            ))}
+                            {AbsExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.AbsExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
+                            ))}
+                            {BackExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
+                            ))}
+                            {FHExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.BackExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
+                            ))}
+                            {BHExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
+                            ))}
+                            {LegsExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.FHExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
+                            ))}
+                            {ShouldersExercises.map(item => (
+                              <div key={item.id}>
+                                {item.selected ? (
+                                  <div className="ExercisesText-Att">
+                                    <div className="ExercisesText">
+                                      <div
+                                        className="Closeitem"
+                                        onClick={this.Closeitem.bind(
+                                          this,
+                                          item.id
+                                        )}
+                                      >
+                                        +
+                                      </div>
+                                      {item.label}
+                                    </div>
+                                  </div>
+                                ) : null}
                               </div>
-                              </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.BHExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
-                              </div>
-                              </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.LegsExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
-                              </div>
-                              </div>
-                            ) : null}
-                          </div>   
-                        ))}
-                        {this.state.ShouldersExercises.map(item => (
-                          <div key={item.id}>
-                            {item.selected ? (
-                              <div className="ExercisesText-Att">
-                              <div className="ExercisesText">
-                                <div
-                                  className="Closeitem"
-                                  onClick={this.Closeitem.bind(this, item.id)}
-                                >
-                                  +
-                                </div>
-                                {item.label}
-                              </div>
-                              </div>
-                            ) : null}
-                          </div>   
-                        ))}
+                            ))}
+                          </div>
+                          <div className="ListBox-Button-Display">
+                            <button className="Buttons-ListBox">
+                              שמור תוכנית
+                            </button>
+                            <button
+                              onClick={() => this.CloseBox()}
+                              className="Buttons-ListBox"
+                            >
+                              סגור
+                            </button>
+                          </div>
                         </div>
-                      <div className="ListBox-Button-Display">
-                        <button className="Buttons-ListBox">שמור תוכנית</button>
-                        <button onClick={() => this.CloseBox()}className="Buttons-ListBox">סגור</button>
                       </div>
-                      </div>
-                      </div>
-                      </div>
+                    </div>
                   ) : null}
                   <form className="Form-Plan">
                     <div className="Plan-Flex">
@@ -501,7 +541,7 @@ class BuildPlan extends Component {
                           <label>{muscles.label}</label>
                           <input
                             type="checkbox"
-                            onChange={this.onChange.bind(this,muscles.id)}
+                            onChange={this.onChange.bind(this, muscles.id)}
                             checked={muscles.selected}
                           />
                         </div>
@@ -511,7 +551,7 @@ class BuildPlan extends Component {
                     <div className="Main-Border"></div>
                     <div className="Build-Exe-Header">רשימת תרגילים</div>
                     <div className="Plan-Padding"></div>
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "Chest" ? (
                           <div className="Display-Button">
@@ -528,7 +568,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "Abs" ? (
                           <div className="Display-Button">
@@ -545,7 +585,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "Back" ? (
                           <div className="Display-Button">
@@ -562,7 +602,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "FrontHand" ? (
                           <div className="Display-Button">
@@ -579,7 +619,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "BackHand" ? (
                           <div className="Display-Button">
@@ -596,7 +636,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "Legs" ? (
                           <div className="Display-Button">
@@ -613,7 +653,7 @@ class BuildPlan extends Component {
                         ) : null}
                       </div>
                     ))}
-                    {this.state.Muscles.map(muscle => (
+                    {Muscles.map(muscle => (
                       <div key={muscle.id}>
                         {muscle.selected && muscle.value === "Shoulders" ? (
                           <div className="Display-Button">

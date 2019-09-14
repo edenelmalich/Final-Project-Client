@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import logo from "../logo.png";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { Component } from 'react';
+import logo from '../logo.png';
+import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faAngleDown,
   faBell,
@@ -9,12 +9,12 @@ import {
   faUsers,
   faChartBar,
   faTasks
-} from "@fortawesome/free-solid-svg-icons";
+} from '@fortawesome/free-solid-svg-icons';
 import {
   faFileAlt,
   faAddressCard,
   faEdit
-} from "@fortawesome/free-regular-svg-icons";
+} from '@fortawesome/free-regular-svg-icons';
 class Navbar extends Component {
   state = {
     Notification: false,
@@ -45,90 +45,91 @@ class Navbar extends Component {
     }
   }
   render() {
+    const { Notification, Account } = this.state;
     return (
-      <div className="Navbar">
-        <div className="Pages-Wrapper">
-          <aside className="sidebar">
-            <div className="logo">
-              <img src={logo} alt="Logo" />
+      <div className='Navbar'>
+        <div className='Pages-Wrapper'>
+          <aside className='sidebar'>
+            <div className='logo'>
+              <img src={logo} alt='Logo' />
             </div>
-            <div className="sidebar__AttText">
+            <div className='sidebar__AttText'>
               <ul>
                 <li>
-                  <NavLink to="/dashboard">
+                  <NavLink to='/dashboard'>
                     <FontAwesomeIcon icon={faTachometerAlt} />
-                    <span className="IconPadding">לוח בקרה</span>
+                    <span className='IconPadding'>לוח בקרה</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/nclients">
+                  <NavLink to='/nclients'>
                     <FontAwesomeIcon icon={faAddressCard} />
-                    <span className="IconPadding">לקוח חדש</span>
+                    <span className='IconPadding'>לקוח חדש</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/healthp">
+                  <NavLink to='/healthp'>
                     <FontAwesomeIcon icon={faFileAlt} />
-                    <span className="IconPadding">הצהרת בריאות</span>
+                    <span className='IconPadding'>הצהרת בריאות</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/customers">
+                  <NavLink to='/customers'>
                     <FontAwesomeIcon icon={faUsers} />
-                    <span className="IconPadding">לקוחות</span>
+                    <span className='IconPadding'>לקוחות</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/statistics">
+                  <NavLink to='/statistics'>
                     <FontAwesomeIcon icon={faChartBar} />
-                    <span className="IconPadding">סטטיסטיקת מתאמנים</span>
+                    <span className='IconPadding'>סטטיסטיקת מתאמנים</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/exeplan">
+                  <NavLink to='/exeplan'>
                     <FontAwesomeIcon icon={faTasks} />
-                    <span className="IconPadding">תוכניות אימונים</span>
+                    <span className='IconPadding'>תוכניות אימונים</span>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="updates">
+                  <NavLink to='updates'>
                     <FontAwesomeIcon icon={faEdit} />
-                    <span className="IconPadding">עדכונים</span>
+                    <span className='IconPadding'>עדכונים</span>
                   </NavLink>
                 </li>
               </ul>
             </div>
           </aside>
-          <header className="header-desktop">
-            <div className="Object-Att">
+          <header className='header-desktop'>
+            <div className='Object-Att'>
               <button
                 onClick={() => this.operationNoti()}
-                className="Notifications"
+                className='Notifications'
               >
                 <FontAwesomeIcon icon={faBell} />
               </button>
-              <div className="Accname">Eden Elmalich</div>
-              <button onClick={() => this.operationAcc()} className="icon-acc">
+              <div className='Accname'>Eden Elmalich</div>
+              <button onClick={() => this.operationAcc()} className='icon-acc'>
                 <FontAwesomeIcon icon={faAngleDown} />
               </button>
             </div>
-            {this.state.Notification ? (
-              <div className="NotiBox">
-                <div className="Notification-Title">יש לך 2 התראות חדשות</div>
-                <div className="Notification-item">
+            {Notification ? (
+              <div className='NotiBox'>
+                <div className='Notification-Title'>יש לך 2 התראות חדשות</div>
+                <div className='Notification-item'>
                   התקבלה הצהרת בריאות חדשה
                 </div>
-                <div className="Notification-item">נרשם לקוח חדש</div>
+                <div className='Notification-item'>נרשם לקוח חדש</div>
               </div>
             ) : null}
-            {this.state.Account ? <Accbox /> : null}
+            {Account ? <Accbox /> : null}
           </header>
-          <header className="header-logo" />
+          <header className='header-logo' />
         </div>
       </div>
     );
   }
 }
 //This is The Box For The Account
-const Accbox = () => <div className="AccBox" />;
+const Accbox = () => <div className='AccBox' />;
 export default Navbar;
