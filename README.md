@@ -5,6 +5,10 @@ operations and see information about their trainers.
 Like: statistics, customers quantity, update gym information and more.
 Use of programming languages:css3,html,react.js,node.js,express.js
 Database:MongoDB
+## Usage:
+
+Download the files and write in the terminal npm install.
+then write npm start and the project will run.
 
 ## Available Scripts
 
