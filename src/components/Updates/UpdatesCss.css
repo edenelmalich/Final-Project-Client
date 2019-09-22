@@ -1,0 +1,48 @@
+.Form-Update {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.25rem;
+}
+
+.Form-Update input[type="text"] {
+    width: 60%;
+    height: 40px;
+    font-size: 16px;
+    color: #555;
+    text-indent: 25px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.Form-Update input[type="submit"] {
+    font-size: 16px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.Form-Update label {
+    text-align: center;
+    font-weight: 600;
+    display: block;
+}
+
+textarea {
+    width: 50%;
+    height: 150px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}

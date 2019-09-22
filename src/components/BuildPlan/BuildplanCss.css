@@ -1,0 +1,89 @@
+.Plan-Padding {
+    padding-bottom: 2rem;
+}
+
+.BackPage {
+    position: absolute;
+    width: 80px;
+    height: 25px;
+    color: #555;
+    font-size: 16px;
+    text-decoration: none;
+    left: 20%;
+    margin-top: 15px;
+}
+
+.BackPage:hover {
+    color: #333;
+}
+
+.Form-Plan {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.25rem;
+}
+
+.Plan-Flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Build-Exe-Header {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    color: #555;
+}
+
+.Form-Plan input[type="checkbox"] {
+    cursor: pointer;
+    margin-right: 3px;
+}
+
+.Form-Plan label {
+    margin-right: 25px;
+}
+
+.Display-Button {
+    height: 200px;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Plan-Button {
+    height: 50px;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #cfcfcf;
+    text-align: center;
+    color: #555;
+    font-weight: 600;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    flex: 0 0 30%;
+}
+
+.Plan-Button:hover {
+    background: #9a9a9a;
+}
+
+.PlanBox {
+    width: 80%;
+    height: 500px;
+    margin-top: 40px;
+    margin-right: 10%;
+    background: #f5f5f5;
+}
+
+.PlanHeader {
+    font-size: 30px;
+    color: #555;
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
+}

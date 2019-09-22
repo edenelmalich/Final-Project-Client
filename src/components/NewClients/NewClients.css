@@ -1,0 +1,178 @@
+.Nclient-FormAtt {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.25rem;
+}
+
+.Form-Flex {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.Nclient-FormAtt input[type=text] {
+    width: 40%;
+    height: 30px;
+    text-indent: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 15px;
+}
+
+.Nclient-FormAtt input[type=submit] {
+    font-size: 16px;
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.Nclient-FormAtt input[type="radio"] {
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.Radio-Text {
+    display: inline-block;
+    color: #555;
+    margin-right: 15px;
+}
+
+.Nclient-FormAtt label {
+    color: #555;
+    padding: 12px 27px 12px 0;
+    display: inline-block;
+}
+
+/*Attributes of icon Exercises List and List Box*/
+.Icon-List {
+    position: absolute;
+    font-size: 30px;
+    color: #555;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    left: 0;
+    margin-top: 15px;
+    margin-left: 22%;
+    display: inline-block;
+}
+
+.Quantity {
+    position: absolute;
+    display: inline-block;
+    left: 23%;
+    padding-top: 1px;
+    height: 18px;
+    width: 18px;
+    line-height: 15px;
+    text-align: center;
+    background: #ff4b5a;
+    color: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    font-size: 12px;
+}
+
+.ListBox-Att {
+    color: #555;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 0;
+    padding: 1.0rem;
+}
+
+.HeaderList {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 7px;
+}
+
+.ExercisesText-Box {
+    height: 290px;
+    overflow: auto;
+}
+
+.ExercisesText-Att {
+    overflow: auto;
+}
+
+.ExercisesText {
+    border-bottom: 1px solid #f2f2f2;
+    color: #fff;
+    padding: 15px 15px;
+    padding-bottom: 14px;
+    display: flex;
+}
+
+.Closeitem {
+    position: absolute;
+    left: 35px;
+    font-size: 18px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.ListBox-Button-Display {
+    display: flex;
+    flex-wrap: wrap;
+    height: 25px;
+}
+
+.Buttons-ListBox {
+    color: #333;
+    height: 35px;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5px;
+    flex: 0 0 48%;
+}
+
+.List-Box-Flex {
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ListBox {
+    position: absolute;
+    width: 24%;
+    height: 400px;
+    background: #555;
+    margin-top: 5%;
+    border-bottom: 1px solid #f2f2f2;
+    z-index: 3;
+    left: 10%;
+}
+
+.ListBox::before {
+    content: "";
+    display: block;
+    width: 19px;
+    height: 19px;
+    border-bottom: 9px solid #555;
+    border-top: 9px solid transparent;
+    border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    position: absolute;
+    top: -17px;
+    float: left;
+    right: 44%;
+    z-index: 3;
+}
