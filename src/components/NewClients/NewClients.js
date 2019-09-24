@@ -105,7 +105,7 @@ const Nclients = () => {
                   <div className='Main-Border'></div>
                   <label>סוג המנוי:</label>
                   {TypeData.map(item => (
-                    <div className='Radio-Text'>
+                    <div className='Radio-Text' key={item.id}>
                       {item.label}
                       <input
                         type='radio'
@@ -118,7 +118,7 @@ const Nclients = () => {
                   <div className='Main-Border'></div>
                   <label>תקופת מנוי:</label>
                   {TimeData.map(item => (
-                    <div className='Radio-Text'>
+                    <div className='Radio-Text' key={item.id}>
                       {item.label}
                       <input
                         type='radio'
@@ -133,7 +133,7 @@ const Nclients = () => {
                   <div className='Main-Border'></div>
                   <label>אמצעי תשלום:</label>
                   {PaymentData.map(item => (
-                    <span className='Radio-Text'>
+                    <span className='Radio-Text' key={item.id}>
                       {item.label}
                       <input
                         type='radio'

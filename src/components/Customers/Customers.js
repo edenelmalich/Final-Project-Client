@@ -10,7 +10,7 @@ class Customers extends Component {
           <div className='Pages-Content'>
             <div className='Att-PagesContent'>
               <div className='PagesContainer'>
-                <div class='Flex-Pages'>
+                <div className='Flex-Pages'>
                   <div className='FormData'>
                     <header className='header-Form'>
                       <h3>לקוחות</h3>
