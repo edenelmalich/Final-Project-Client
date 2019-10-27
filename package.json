@@ -1,7 +1,7 @@
 {
   "name": "maxfit",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
 
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
