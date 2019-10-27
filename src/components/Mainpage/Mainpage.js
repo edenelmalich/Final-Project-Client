@@ -5,20 +5,25 @@ import mainback from '../../img/mainback.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser as FasUser } from '@fortawesome/free-regular-svg-icons';
 import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
-
-const Mainpage = () => {
+import { NavLink, Redirect } from 'react-router-dom';
+// Redux
+import { connect } from 'react-redux';
+import { login } from '../../actions/authAction';
+const Mainpage = ({ login, isAuthLogin }) => {
   const [Data, SetData] = useState({
     Email: '',
     Password: ''
   });
-
   const { Email, Password } = Data;
   const onChange = e => SetData({ ...Data, [e.target.name]: e.target.value });
-  const onSubmit = async e => {
+
+  const onSubmit = e => {
     e.preventDefault();
-    console.log('Login Succeed');
+    login(Email, Password);
   };
+  if (isAuthLogin) {
+    return <Redirect to='/Dashboard' />;
+  }
   return (
     <Fragment>
       <img className='MainBack' src={mainback} alt='main' />
@@ -87,4 +92,10 @@ const Mainpage = () => {
     </Fragment>
   );
 };
-export default Mainpage;
+const mapStateToProps = state => ({
+  isAuthLogin: state.authLoginReducer.isAuthLogin
+});
+export default connect(
+  mapStateToProps,
+  { login }
+)(Mainpage);

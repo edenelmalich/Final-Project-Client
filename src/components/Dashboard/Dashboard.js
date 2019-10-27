@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Navbar from '../Navbar/Navbar';
 import '../../css/CssFont.css';
 import './DashboardCSS.css';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faUser,
@@ -10,9 +10,15 @@ import {
   faUserClock,
   faChartBar
 } from '@fortawesome/free-solid-svg-icons';
+import { PropTypes } from 'prop-types';
+// Redux
+import { connect } from 'react-redux';
 
 class Dashboard extends Component {
   render() {
+    if (!this.props.isAuthLogin) {
+      return <Redirect to='/' />;
+    }
     return (
       <div>
         <Navbar />
@@ -86,4 +92,10 @@ class Dashboard extends Component {
     );
   }
 }
-export default Dashboard;
+Dashboard.propTypes = {
+  isAuthLogin: PropTypes.bool
+};
+const mapStateToProps = state => ({
+  isAuthLogin: state.authLoginReducer.isAuthLogin
+});
+export default connect(mapStateToProps)(Dashboard);

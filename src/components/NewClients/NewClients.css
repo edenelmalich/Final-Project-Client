@@ -49,3 +49,8 @@
     padding: 12px 27px 12px 0;
     display: inline-block;
 }
+
+.calculation {
+    margin-right: 10px;
+    font-weight: 600;
+}

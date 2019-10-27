@@ -4,8 +4,22 @@ import { Link } from 'react-router-dom';
 import './BuildplanCss.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
+// Redux
+import { connect } from 'react-redux';
+import { SetList } from '../../actions/listAction';
+import { SetNotification } from './../../actions/notificationAction';
+import { SetAccount } from './../../actions/accountAction';
 
-const BuildPlan = () => {
+const BuildPlan = props => {
+  const {
+    listBox,
+    ListBoxSelected,
+    NotificationsSelected,
+    AccountSelected,
+    noti,
+    acc
+  } = props;
+  // Data
   const Exercises = [
     // Chest Exercises
     { id: 1, label: 'לחיצת חזה כנגד מוט', selected: false },
@@ -164,6 +178,7 @@ const BuildPlan = () => {
     { id: 5, label: 'רגליים', value: 'Legs', selected: false },
     { id: 6, label: 'כתפיים', value: 'Shoulders', selected: false }
   ];
+  // useState
   const [MusclesData, SetMuscles] = useState(Muscles);
   const [ChestData] = useState(Chest);
   const [AbsData] = useState(Abs);
@@ -172,12 +187,9 @@ const BuildPlan = () => {
   const [BackHandData] = useState(BackHand);
   const [LegsData] = useState(Legs);
   const [ShouldersData] = useState(Shoulders);
-  const [OpenListData, SetOpenList] = useState({
-    OpenList: false
-  });
   const [CounterData, SetCounter] = useState(0);
   const [ExercisesData, SetExercises] = useState(Exercises);
-  const { OpenList } = OpenListData;
+  // Functions
   const onChange = id => {
     SetMuscles(
       MusclesData.map(muscle => {
@@ -195,7 +207,6 @@ const BuildPlan = () => {
         ExercisesData.map(chest => {
           if (id === chest.id && chest.selected === false) {
             const Checked = { ...chest, selected: true };
-            console.log(id);
             Additem();
             return Checked;
           }
@@ -290,7 +301,16 @@ const BuildPlan = () => {
       })
     );
   };
+  const ShowList = () => {
+    listBox(ListBoxSelected);
 
+    if (NotificationsSelected === true) {
+      noti(NotificationsSelected);
+    }
+    if (AccountSelected === true) {
+      acc(AccountSelected);
+    }
+  };
   return (
     <div className='BuildPlan'>
       <Navbar />
@@ -312,13 +332,10 @@ const BuildPlan = () => {
                 <div className='Main-Border'></div>
                 <div className='Quantity'>{CounterData}</div>
                 {/* Code to open and close the list */}
-                <button
-                  className='Icon-List'
-                  onClick={() => SetOpenList({ OpenList: !OpenList })}
-                >
+                <button className='Icon-List' onClick={() => ShowList()}>
                   <FontAwesomeIcon icon={faClipboardList} />
                 </button>
-                {OpenList ? (
+                {ListBoxSelected ? (
                   <div className='ListBox'>
                     <div className='ListBox-Att'>
                       <div className='HeaderList'>
@@ -348,7 +365,7 @@ const BuildPlan = () => {
                       <div className='ListBox-Button-Display'>
                         <button className='Buttons-ListBox'>שמור תוכנית</button>
                         <button
-                          onClick={() => SetOpenList({ OpenListData: false })}
+                          onClick={() => listBox(ListBoxSelected)}
                           className='Buttons-ListBox'
                         >
                           סגור
@@ -458,6 +475,7 @@ const BuildPlan = () => {
     </div>
   );
 };
+// Show-Muscles
 const ShowChest = props => (
   <div className='Display-Button'>
     {props.ChestData.map(item => (
@@ -549,4 +567,27 @@ const ShowShoulders = props => (
     ))}
   </div>
 );
-export default BuildPlan;
+const mapStateToProps = state => {
+  return {
+    ListBoxSelected: state.listReducer.ListBoxSelected,
+    AccountSelected: state.accountReducer.AccountSelected,
+    NotificationsSelected: state.notiReducer.NotificationsSelected
+  };
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    listBox: boolean => {
+      dispatch(SetList(boolean));
+    },
+    noti: boolean => {
+      dispatch(SetNotification(boolean));
+    },
+    acc: boolean => {
+      dispatch(SetAccount(boolean));
+    }
+  };
+};
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(BuildPlan);

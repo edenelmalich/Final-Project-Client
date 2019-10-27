@@ -6,7 +6,6 @@ import './ExePlanCss.css';
 const ExePlan = () => {
   // Function That For Checking The State of The Days
   // And The Function Set the state again
-
   return (
     <div className='ExePlan'>
       <Navbar />

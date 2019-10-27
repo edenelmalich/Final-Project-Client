@@ -5,9 +5,14 @@ import './RegisterCss.css';
 import { faAddressCard as FasAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Redirect } from 'react-router-dom';
+import { PropTypes } from 'prop-types';
+// Redux
+import { connect } from 'react-redux';
+import { setAlert } from './../../actions/alertAction';
+import { register } from './../../actions/authAction';
 
-const Registar = () => {
+const Register = ({ setAlert, register, isAuth }) => {
   const [Data, SetData] = useState({
     LastName: '',
     FirstName: '',
@@ -21,12 +26,14 @@ const Registar = () => {
   const onSubmit = e => {
     e.preventDefault();
     if (Password !== RePassword) {
-      console.log('The Passwords not match');
+      setAlert('The Passwords not match');
     } else {
-      console.log('Registration Succeeded');
+      register(LastName, FirstName, Email, Password);
     }
   };
-
+  if (isAuth) {
+    return <Redirect to='/' />;
+  }
   return (
     <Fragment>
       <img className='MainBack' src={mainback} alt='main' />
@@ -116,5 +123,14 @@ const Registar = () => {
     </Fragment>
   );
 };
-
-export default Registar;
+Register.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+  isAuth: PropTypes.bool
+};
+const mapStateToProps = state => ({
+  isAuth: state.authReducer.isAuth
+});
+export default connect(
+  mapStateToProps,
+  { setAlert, register }
+)(Register);
