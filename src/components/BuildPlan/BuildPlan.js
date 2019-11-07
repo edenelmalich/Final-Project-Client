@@ -6,9 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClipboardList } from '@fortawesome/free-solid-svg-icons';
 // Redux
 import { connect } from 'react-redux';
-import { SetList } from '../../actions/listAction';
-import { SetNotification } from './../../actions/notificationAction';
-import { SetAccount } from './../../actions/accountAction';
+import { SetNotification } from '../../actions/NavAction';
+import { SetAccount } from './../../actions/NavAction';
 
 const BuildPlan = props => {
   const {
@@ -576,9 +575,6 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => {
   return {
-    listBox: boolean => {
-      dispatch(SetList(boolean));
-    },
     noti: boolean => {
       dispatch(SetNotification(boolean));
     },

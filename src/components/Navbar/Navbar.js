@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../../img/logo.png';
-import './NavbarCss.css';
+import PropTypes from 'prop-types';
+import './Navbar.css';
 import { NavLink, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -18,43 +19,19 @@ import {
 } from '@fortawesome/free-regular-svg-icons';
 // Redux
 import { connect } from 'react-redux';
-import { SetNotification } from './../../actions/notificationAction';
-import { SetAccount } from './../../actions/accountAction';
-import { SetList } from '../../actions/listAction';
-import { Disconnect } from '../../actions/DisconnectAction';
+import { SetNotification, SetAccount } from '../../actions/NavAction';
 
-const Navbar = props => {
-  // This Function Check if The Notification Box Are Open And Set The State Again
-  const {
-    notifications,
-    NotificationsSelected,
-    Account,
-    AccountSelected,
-    ListBoxSelected,
-    List
-  } = props;
-  const operationNoti = () => {
-    notifications(NotificationsSelected);
-    //if The Account Box Are Open We Want To set The State Again That The Windows Will Close
+import { Logout } from '../../actions/authAction';
 
-    if (AccountSelected === true) {
-      Account(AccountSelected);
-    }
-    if (ListBoxSelected === true) {
-      List(ListBoxSelected);
-    }
-  };
-  // The Same Function Just Here We Will Check The Account State
-  const operationAcc = () => {
-    Account(AccountSelected);
-    // The Same if The Notification Box Are Open We Want To close it
-    if (NotificationsSelected === true) {
-      notifications(NotificationsSelected);
-    }
-    if (ListBoxSelected === true) {
-      List(ListBoxSelected);
-    }
-  };
+const Navbar = ({
+  NotificationsSelected,
+  AccountSelected,
+  Logout,
+  user,
+  SetAccount,
+  SetNotification
+}) => {
+  const { Name } = user;
   return (
     <div className='Navbar'>
       <div className='Pages-Wrapper'>
@@ -85,7 +62,7 @@ const Navbar = props => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='/customers'>
+                <NavLink to='/AllClients'>
                   <FontAwesomeIcon icon={faUsers} />
                   <span className='IconPadding'>לקוחות</span>
                 </NavLink>
@@ -103,7 +80,7 @@ const Navbar = props => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to='updates'>
+                <NavLink to='/updates'>
                   <FontAwesomeIcon icon={faEdit} />
                   <span className='IconPadding'>עדכונים</span>
                 </NavLink>
@@ -113,18 +90,26 @@ const Navbar = props => {
         </aside>
         <header className='header-desktop'>
           <div className='Object-Att'>
-            <button onClick={() => operationNoti()} className='Notifications'>
+            <button
+              onClick={() => SetNotification(NotificationsSelected)}
+              className='Notifications'
+            >
               <FontAwesomeIcon icon={faBell} />
             </button>
-            <div className='Accname'>Eden Elmalich</div>
-            <button onClick={() => operationAcc()} className='icon-acc'>
+            <div className='Accname'> שלום {Name}</div>
+            <button
+              onClick={() => SetAccount(AccountSelected)}
+              className='icon-acc'
+            >
               <FontAwesomeIcon icon={faAngleDown} />
             </button>
           </div>
           {NotificationsSelected ? (
-            <NotiBox operationNoti={operationNoti} />
+            <NotiBox SetNotification={SetNotification} />
           ) : null}
-          {AccountSelected ? <Accbox operationAcc={operationAcc} /> : null}
+          {AccountSelected ? (
+            <Accbox SetAccount={SetAccount} Logout={Logout} />
+          ) : null}
         </header>
         <header className='header-logo' />
       </div>
@@ -132,74 +117,50 @@ const Navbar = props => {
   );
 };
 //This Box will show the settings
-const Accbox = props => (
+const Accbox = ({ Logout }) => (
   <div className='AccBox'>
     <div className='Settings-Title'>הגדרות</div>
-    <Link
-      to='/PersonalDetails'
-      onClick={() => props.operationAcc()}
-      className='Settings-item'
-    >
+    <Link to='/PersonalDetails' className='Settings-item'>
       פרטים אישיים
     </Link>
-    <Link
-      to='/ChangePass'
-      onClick={() => props.operationAcc()}
-      className='Settings-item'
-    >
+    <Link to='/changePass' className='Settings-item'>
       שינוי סיסמא
     </Link>
-    <Link
-      to='/ChangeEmail'
-      onClick={() => props.operationAcc()}
-      className='Settings-item'
-    >
+    <Link to='/ChangeEmail' className='Settings-item'>
       שינוי דואר אלקטרוני
     </Link>
-    <Link to='/' onClick={() => props.Disconnect()} className='Settings-item'>
+    <Link to='/' onClick={() => Logout()} className='Logout-item'>
       התנתקות
     </Link>
   </div>
 );
 //This Box will show the notifications
-const NotiBox = props => (
+const NotiBox = () => (
   <div className='NotiBox'>
     <div className='Notification-Title'>יש לך 2 התראות חדשות</div>
     <div className='Notification-item'>התקבלה הצהרת בריאות חדשה</div>
     <div className='Notification-item'>נרשם לקוח חדש</div>
-    <Link
-      to='/Notifications'
-      onClick={() => props.operationNoti()}
-      className='Notification-Footer'
-    >
+    <Link to='/Notifications' className='Notification-Footer'>
       לכל ההתראות
     </Link>
   </div>
 );
-const mapStateToProps = state => {
-  return {
-    NotificationsSelected: state.notiReducer.NotificationsSelected,
-    AccountSelected: state.accountReducer.AccountSelected,
-    ListBoxSelected: state.listReducer.ListBoxSelected
-  };
+
+Navbar.propTypes = {
+  user: PropTypes.object,
+  Logout: PropTypes.func.isRequired,
+  SetNotification: PropTypes.func,
+  setAccount: PropTypes.func,
+  NotificationsSelected: PropTypes.bool,
+  AccountSelected: PropTypes.bool
 };
-const mapDispatchToProps = dispatch => {
-  return {
-    notifications: boolean => {
-      dispatch(SetNotification(boolean));
-    },
-    Account: boolean => {
-      dispatch(SetAccount(boolean));
-    },
-    List: boolean => {
-      dispatch(SetList(boolean));
-    },
-    disconnect: () => {
-      dispatch(Disconnect());
-    }
-  };
-};
+const mapStateToProps = state => ({
+  NotificationsSelected: state.NavReducer.NotificationsSelected,
+  AccountSelected: state.NavReducer.AccountSelected,
+  user: state.authReducer.user
+});
+
 export default connect(
   mapStateToProps,
-  mapDispatchToProps
+  { Logout, SetNotification, SetAccount }
 )(Navbar);

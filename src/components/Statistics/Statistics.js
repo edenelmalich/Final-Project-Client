@@ -1,49 +1,40 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Navbar from '../Navbar/Navbar';
-import './StatisticsCss.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWeight, faDumbbell } from '@fortawesome/free-solid-svg-icons';
-
-class Statistics extends Component {
-  render() {
-    return (
-      <div className='Statistics'>
-        <Navbar />
-        <div className='Page-Container'>
+import './Statistics.css';
+import AppFooter from '../AppFooter';
+import { Card } from 'react-bootstrap';
+const Statistics = () => {
+  return (
+    <div className='Statistics'>
+      <Navbar />
+      <div className='Page-Container'>
+        <main className='main'>
           <div className='Pages-Content'>
             <div className='Att-PagesContent'>
               <div className='PagesContainer'>
                 <h2>סטטיסטיקת מתאמנים</h2>
-                <div className='Flex-Statistic'>
-                  <div className='StatisticInfo'>
-                    <div className='HeaderStat'>
-                      <h4 className='Statistic-Header-Att'> סטטיסטיקת משקל </h4>
-                      <div className='Iconstat'>
-                        <FontAwesomeIcon icon={faWeight} />
-                      </div>
-                    </div>
-                  </div>
-                  <div className='StatisticInfo'>
-                    <div className='HeaderStat'>
-                      <h4 className='Statistic-Header-Att'>
-                        {' '}
-                        סטטיסטיקת היקף יד קדמית
-                      </h4>
-                      <div className='Iconstat'>
-                        <FontAwesomeIcon icon={faDumbbell} />
-                      </div>
-                    </div>
-                  </div>
+                <form className='Stat-Form'>
+                  <input type='text' placeholder='הכנס שם מתאמן' />
+                  <input type='submit' value='בדוק סטטיסטיקות' />
+                </form>
+                <div className='Stat-content'>
+                  <Card>
+                    <Card.Header>סטטיסטיקת משקל</Card.Header>
+                    <Card.Body></Card.Body>
+                  </Card>
+                  <Card>
+                    <Card.Header>סטטיסטיקת היקף יד קדמית</Card.Header>
+                    <Card.Body></Card.Body>
+                  </Card>
                 </div>
               </div>
             </div>
           </div>
-          <div className='FooterText'>
-            <div className='FooterTitle'>Final Project By Eden Elmalich</div>
-          </div>
-        </div>
+        </main>
+        <AppFooter />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
+
 export default Statistics;

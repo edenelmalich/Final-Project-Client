@@ -1,101 +1,170 @@
-import React, { Fragment, useState } from 'react';
-import './MainpageCss.css';
+import React from 'react';
 import logo from '../../img/logo.png';
-import mainback from '../../img/mainback.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser as FasUser } from '@fortawesome/free-regular-svg-icons';
-import { faUser, faLock } from '@fortawesome/free-solid-svg-icons';
-import { NavLink, Redirect } from 'react-router-dom';
-// Redux
-import { connect } from 'react-redux';
-import { login } from '../../actions/authAction';
-const Mainpage = ({ login, isAuthLogin }) => {
-  const [Data, SetData] = useState({
-    Email: '',
-    Password: ''
-  });
-  const { Email, Password } = Data;
-  const onChange = e => SetData({ ...Data, [e.target.name]: e.target.value });
-
-  const onSubmit = e => {
-    e.preventDefault();
-    login(Email, Password);
-  };
-  if (isAuthLogin) {
-    return <Redirect to='/Dashboard' />;
-  }
+import '../../css/MainPages.css';
+import { Carousel } from 'react-bootstrap';
+import maxfit from '../../img/maxfit.png';
+import NewClient from '../../img/NewClient.png';
+import Clients from '../../img/Clients.png';
+import Updates from '../../img/Updates.png';
+import { Link } from 'react-router-dom';
+import MainFooter from '../MainFooter';
+// Mobile imports
+import MobileFooter from '../Mobile/MobileFooter';
+import MediaQuery from 'react-responsive';
+const MainPage = () => {
   return (
-    <Fragment>
-      <img className='MainBack' src={mainback} alt='main' />
-      <header>
-        <img className='Mainlogo' src={logo} alt='Logo' />
-      </header>
-      <header className='MainTitle'>תוכנה לניהול חדר כושר</header>
-      <div className='Main-Wrap'>
-        <div className='Main-Box'>
-          <header className='MainHeader'>
-            <div className='Main-HeaderText'>Maxfit Gym</div>
-          </header>
-          <div className='MainAtt'>
-            <FontAwesomeIcon className='Main-Icon' icon={FasUser} />
-            <header className='Main-Title'> התחברות</header>
-            <form className='FormLogin' onSubmit={e => onSubmit(e)}>
-              <FontAwesomeIcon className='Icon-Login' icon={faUser} />
-              <input
-                type='text'
-                name='Email'
-                value={Email}
-                onChange={e => onChange(e)}
-                placeholder='דואר אלקטרוני'
-                required
-              />
-              <FontAwesomeIcon className='Icon-Login-Pass' icon={faLock} />
-              <div className='Padding-Login'></div>
-              <input
-                type='password'
-                name='Password'
-                value={Password}
-                onChange={e => onChange(e)}
-                placeholder='סיסמא'
-                required
-              />
-              <input type='submit' name='Password' value='התחברות' />
-              <div className='Padding-Login'></div>
-              <div className='Main-Border'></div>
-              <div className='Label-Login-Att'>
-                <NavLink to='/forgotPass' className='ForgetButton'>
-                  <div className='Main-Padding'></div>
-                  שכחת את הסיסמה?
-                </NavLink>
-                <label>
-                  זכור אותי?
-                  <input type='checkbox' name='forget' value='Remember' />
-                </label>
+    <div className='MainPage'>
+      <MediaQuery maxDeviceWidth={1024}>
+        <MobileMain />
+      </MediaQuery>
+      <MediaQuery minDeviceWidth={1280}>
+        <header>
+          <div className='MainPage-Header'>
+            <div className='MainPage-logo'>
+              <img src={logo} alt='Logo' />
+            </div>
+          </div>
+        </header>
+        <main className='main'>
+          <div className='MainPage-container'>
+            <div className='MainPage-content '>
+              <div className='MainPage-title '>ברוכים הבאים ל-Maxfit</div>
+              <div className='MainPage-text'>
+                תוכנה לניהול חדר כושר שתאפשר לבעל חדר הכושר לבצע פעולות כמו:
+                בניית תוכניות אימונים, לראות סטטיסטיקות על מתאמנים, להוסיף
+                מתאמנים חדשים ועוד.
               </div>
-              <div className='Main-Padding'></div>
-              <div className='Main-Border'></div>
-              <div className='Main-Padding'></div>
-              <div className='Label-Login-Att'>
-                <label>אין לך משתמש?</label>
-                <NavLink to='/registarApp' className='RegistarButton'>
-                  הירשם כעת
-                </NavLink>
+              <div className='Carousel-content '>
+                <Carousel>
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100 '
+                      src={maxfit}
+                      alt='Maxfit Dashboard'
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={NewClient}
+                      alt='New Client page'
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={Updates}
+                      alt='Third slide'
+                    />
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img
+                      className='d-block w-100'
+                      src={Clients}
+                      alt='Third slide'
+                    />
+                  </Carousel.Item>
+                </Carousel>
               </div>
-              <div className='Main-Padding'></div>
-            </form>
+              <div className='MainPage-text'>
+                בנוסף מנהל חדר הכושר יוכל בעמוד הבקרה לראות מידע כמו: סטטיסטיקות
+                מנויים, רשימת מתאמנים ועוד.
+              </div>
+              <div className='Button-content '>
+                <div className='MainPage-text'>
+                  נשמע מעניין?
+                  <Link to='/registarApp'>
+                    <button>הירשם עכשיו</button>
+                  </Link>
+                </div>
+                <div className='MainPage-text'>
+                  כבר רשום?
+                  <Link to='/LoginApp'>
+                    <button>התחבר</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <MainFooter />
+      </MediaQuery>
+    </div>
+  );
+};
+const MobileMain = () => (
+  <div className='Mobile'>
+    <header>
+      <div className='Mobile-Header'>
+        <img src={logo} alt='Logo' id='Mobile-img' />
+      </div>
+    </header>
+    <main className='main'>
+      <div className='Mobile-container'>
+        <div className='Mobile-content'>
+          <div className='Mobile-Main-Title '>ברוכים הבאים ל-Maxfit</div>
+
+          <div className='Mobile-Main-Text'>
+            תוכנה לניהול חדר כושר שתאפשר לבעל חדר הכושר לבצע פעולות כמו: בניית
+            תוכניות אימונים, לראות סטטיסטיקות על מתאמנים, להוסיף מתאמנים חדשים
+            ועוד.
+          </div>
+          <div className='Mobile-Carousel-content '>
+            <Carousel>
+              <Carousel.Item>
+                <img
+                  className='d-block w-100 '
+                  src={maxfit}
+                  alt='Maxfit Dashboard'
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className='d-block w-100'
+                  src={NewClient}
+                  alt='New Client page'
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className='d-block w-100'
+                  src={Updates}
+                  alt='Third slide'
+                />
+              </Carousel.Item>
+              <Carousel.Item>
+                <img
+                  className='d-block w-100'
+                  src={Clients}
+                  alt='Third slide'
+                />
+              </Carousel.Item>
+            </Carousel>
+          </div>
+          <div className='Mobile-Main-Text'>
+            בנוסף מנהל חדר הכושר יוכל בעמוד הבקרה לראות מידע כמו: סטטיסטיקות
+            מנויים, רשימת מתאמנים ועוד.
+          </div>
+          <div className='Button-content '>
+            <div className='Mobile-Main-Text'>
+              נשמע מעניין?
+              <Link to='/registarApp'>
+                <button>הירשם עכשיו</button>
+              </Link>
+            </div>
+            <div className='Mobile-Main-Text'>
+              כבר רשום?
+              <Link to='/LoginApp'>
+                <button>התחבר</button>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
-      <div className='Footer-Pages'>
-        <div className='Main-Title-Footer'>Final Project By Eden Elmalich</div>
-      </div>
-    </Fragment>
-  );
-};
-const mapStateToProps = state => ({
-  isAuthLogin: state.authLoginReducer.isAuthLogin
-});
-export default connect(
-  mapStateToProps,
-  { login }
-)(Mainpage);
+    </main>
+    <footer>
+      <MobileFooter />
+    </footer>
+  </div>
+);
+export default MainPage;

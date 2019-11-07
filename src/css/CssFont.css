@@ -31,7 +31,7 @@ body {
 }
 
 .Page-Container {
-  background: #e5e5e5;
+  background: #353c3f;
   padding-right: 300px;
 }
 
@@ -40,131 +40,37 @@ body {
   padding: 0;
 }
 
-.FooterText {
-  flex: 0 0 100%;
-  width: 100%;
-  height: 50px;
-  padding: 20px;
-}
-
-.FooterTitle {
+/* Footer for all the pages */
+.App-footer {
   position: relative;
-  text-align: center;
+  text-align: left;
+  height: 40px;
+  padding-top: 10px;
+  font-size: 1rem;
+  width: 100%;
+  color: #353c3f;
 }
 
-.Footer-Pages {
-  margin-top: 15px;
-  height: 75px;
-  text-align: center;
+.Footer-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: rgba(0, 0, 0, .125);
+}
+
+.Footer-Padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /*The Attributes of Mainpage*/
-.Mainlogo {
-  position: relative;
-  max-width: 100%;
-  height: 130px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border-style: none;
-}
-
-.Main-Title-Footer {
-  position: relative;
-}
-
-.MainBack {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-}
-
-.MainTitle {
-  position: relative;
-  color: #555;
-  font-size: 30px;
-  font-weight: 600;
-  text-align: center;
-}
-
-.MainHeader {
-  position: relative;
-  background: #dfdede;
-  padding: 10px;
-}
-
-.Main-HeaderText {
-  position: relative;
-  font-size: 30px;
-  color: #555;
-  text-align: center;
-  padding: 10px;
-  font-weight: 400;
-}
-
-.Main-Wrap {
-  max-width: 540px;
-  padding-top: 5vh;
-  margin: 0 auto;
-}
-
-.Main-Box {
-  position: relative;
-  background: #ffffff;
-  background-repeat: no-repeat;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.MainAtt {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
-.Main-Icon {
-  color: #555;
-  font-size: 3em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.Main-Title {
-  color: #555;
-  font-size: 22px;
-  font-weight: 600;
-  padding: 10px;
-  text-align: center;
-}
 
 .Main-Border {
-  border-top: 1px solid #e7e7e7;
+  border-top: 1px solid #353c3f;
   margin-bottom: 7px;
 }
 
 .Main-Padding {
   margin-bottom: 1rem;
-}
-
-.Main-Label-Att {
-  text-align: center;
-}
-
-.Main-Return-Link {
-  color: #555;
-  cursor: pointer;
-  text-decoration: none;
-  padding: 2px;
-  margin-right: 5px;
-}
-
-.Main-Return-Link:hover {
-  background: #b6b6b6;
 }
 
 /*Form Register With Attributes*/
@@ -173,11 +79,13 @@ body {
 /*The Attributes of the Sidebar in all pages*
 /*heading 2,3,4 Attributes */
 h2 {
-  color: #555;
+  color: #f8f9fa;
+  text-align: right;
+  padding-bottom: 1rem;
 }
 
 h3 {
-  color: #555;
+  color: #353c3f;
   margin-right: 5px;
   font-size: 20px;
   padding: 25px 10px;
@@ -193,7 +101,8 @@ h4 {
 /*The Attributes of the box inside pages: Customers,Nclients,HealthP*/
 .header-Form {
   background: #f5f5f5;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px 0px #353c3f;
+  text-align: right;
 }
 
 .Flex-Pages {
@@ -204,20 +113,28 @@ h4 {
 
 .FormData {
   height: 500px;
-  background: #fff;
-  margin: 0 auto;
-  flex: 0 0 75%;
+  background: #f8f9fa;
+  margin-right: auto;
+  margin-left: auto;
+  flex: 0 0 90%;
+  overflow: auto;
+
+}
+
+.FormData .table {
+  padding: 1.25rem;
 }
 
 .FormClient {
-  background: #fff;
+  background: #f8f9fa;
   max-width: 540px;
   margin: 0 auto;
+  text-align: right;
 }
 
 .Header-Client {
-  background: #f5f5f5;
-  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+  background: #f8f9fa;
+  box-shadow: 0px 2px 5px 0px #353c3f;
 }
 
 /*Attributes of scrollbar */
@@ -233,4 +150,37 @@ h4 {
 ::-webkit-scrollbar-thumb {
   border-radius: 5px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.Footer-App {
+  position: relative;
+  text-align: left;
+  height: 50px;
+  padding-top: 10px;
+  font-size: 1rem;
+  left: 0;
+  width: 100%;
+
+  color: #f8f9fa;
+  background: #353c3f;
+  ;
+}
+
+.Footer-top {
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #f8f9fa;
+}
+
+.Footer-Padding {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Alert Attributes */
+.Alert-Position {
+  position: absolute;
+  right: 0;
+  padding-right: 45px;
 }
