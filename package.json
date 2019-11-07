@@ -2,6 +2,10 @@
   "name": "maxfit",
   "version": "0.1.0",
   "private": false,
+  "engines": {
+    "npm": "6.12.0",
+    "node": "12.3.1"
+  },
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
